@@ -1,9 +1,10 @@
 "use client";
 
-import { useLocale, useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { GithubIcon, LinkedinIcon } from "./ui/BrandIcons";
+import { CvDownloadButton } from "./CvDownloadButton";
 import { socials } from "@/lib/data";
 
 const socialLinks = [
@@ -13,9 +14,6 @@ const socialLinks = [
 
 export function Hero() {
   const t = useTranslations("hero");
-  const locale = useLocale();
-  const cvHref =
-    locale === "de" ? "/cv/Yahya-Dhaou-CV-DE.pdf" : "/cv/Yahya-Dhaou-CV-EN.pdf";
 
   const stats = [
     { value: t("statYears"), label: t("statYearsLabel") },
@@ -94,22 +92,7 @@ export function Hero() {
             >
               {t("ctaProjects")}
             </a>
-            <a
-              href={cvHref}
-              download
-              className="flex items-center gap-2 text-sm font-medium text-muted transition-colors hover:text-foreground"
-            >
-              {t("ctaCv")}
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                <path
-                  d="M7 1v9m0 0L3.5 6.5M7 10l3.5-3.5M1 12.5h12"
-                  stroke="currentColor"
-                  strokeWidth="1.3"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </a>
+            <CvDownloadButton />
           </motion.div>
 
           <motion.div
