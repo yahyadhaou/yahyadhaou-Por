@@ -1,0 +1,150 @@
+{
+  "meta": {
+    "title": "Yahya Dhaou — Full-Stack-Entwickler",
+    "description": "Full-Stack-Entwickler spezialisiert auf React, Next.js und React Native. Wohnhaft in Essen, Deutschland."
+  },
+  "nav": {
+    "about": "Über mich",
+    "skills": "Kenntnisse",
+    "projects": "Projekte",
+    "experience": "Erfahrung",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "badge": "Offen für neue Möglichkeiten",
+    "greeting": "Hallo, ich bin",
+    "name": "Yahya Dhaou",
+    "role": "Full-Stack-Entwickler",
+    "roleHighlight": "React · React Native · Next.js",
+    "tagline": "Ich entwickle schnelle, zuverlässige Web- und Mobile-Produkte — von pixelgenauen Interfaces bis zu den APIs und Datenbanken dahinter.",
+    "ctaContact": "Kontakt aufnehmen",
+    "ctaProjects": "Projekte ansehen",
+    "ctaCv": "Lebenslauf herunterladen",
+    "statYears": "3+",
+    "statYearsLabel": "Jahre Erfahrung",
+    "statProjects": "15+",
+    "statProjectsLabel": "Umgesetzte Projekte",
+    "statLanguages": "3",
+    "statLanguagesLabel": "Gesprochene Sprachen",
+    "scroll": "Scrollen"
+  },
+  "about": {
+    "eyebrow": "Über mich",
+    "title": "Produkte von Anfang bis Ende — mit Sorgfalt.",
+    "paragraph1": "Ich bin Full-Stack-Entwickler mit Sitz in Essen, spezialisiert auf React, Next.js und React Native, mit soliden Backend-Kenntnissen in Node.js sowie SQL- und NoSQL-Datenbanken. Am liebsten verantworte ich ein Feature von der Figma-Datei bis zur Produktionsdatenbank.",
+    "paragraph2": "In den letzten drei Jahren habe ich eine zweiseitige Marketplace-App, eine freiberuflich entwickelte Reisebuchungsplattform, Admin-Dashboards für Dutzende Datenentitäten sowie über 30 wiederverwendbare UI-Komponenten für mehrere Projekte umgesetzt.",
+    "paragraph3": "Ursprünglich aus Tunesien, bin ich 2025 nach Deutschland gezogen und habe das Sprachniveau C1 erreicht — ich arbeite heute sicher auf Englisch, Französisch und Deutsch.",
+    "values": [
+      {
+        "title": "Sauberer Code",
+        "description": "Wartbar, typisiert und so geschrieben, dass ihn die nächste Person versteht."
+      },
+      {
+        "title": "Performance",
+        "description": "Lazy Loading, Memoization und Code-Splitting von Anfang an, nicht nachträglich."
+      },
+      {
+        "title": "Volle Verantwortung",
+        "description": "Sicher über den gesamten Stack hinweg — vom UI-Feinschliff bis zum Datenbankschema."
+      },
+      {
+        "title": "Kontinuierliches Lernen",
+        "description": "Aktuell vertiefe ich mich in Docker, Kubernetes und angewandte KI-Tools."
+      }
+    ]
+  },
+  "skills": {
+    "eyebrow": "Tech-Stack",
+    "title": "Werkzeuge, mit denen ich Produkte umsetze",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "database": "Datenbanken",
+      "tools": "Tools & DevOps"
+    }
+  },
+  "projects": {
+    "eyebrow": "Ausgewählte Projekte",
+    "title": "Projekte, die live gegangen sind",
+    "subtitle": "Eine Mischung aus Produktarbeit und Freelance-Projekten — mobile Apps, Dashboards und Marketing-Websites.",
+    "viewLive": "Live-Demo",
+    "viewCode": "Quellcode",
+    "privateCode": "Privater Code (NDA)",
+    "screenshotsSoon": "Screenshots folgen in Kürze",
+    "visitSite": "Live-Produkt — zum Entdecken klicken",
+    "role": "Meine Rolle",
+    "tabClient": "Kunden-App",
+    "tabProvider": "Anbieter-App",
+    "items": {
+      "glowupApp": {
+        "tag": "Produkt · Mobile",
+        "title": "GlowUp Beauty App",
+        "description": "Ein zweiseitiger Beauty-Marktplatz für den deutschen Markt. Kund:innen finden verifizierte Beauty-Profis und buchen Termine in Echtzeit, während Anbieter:innen Termine, Kund:innen und Einnahmen über eine eigene App verwalten.",
+        "role": "Full-Stack — React-Native-(Expo)-Apps für Kund:innen & Anbieter, Node.js-API, PostgreSQL"
+      },
+      "showcase": {
+        "tag": "Produkt · Web",
+        "title": "GlowUp — Produkt-Showroom",
+        "description": "Zweisprachiger (DE/EN) Showroom für Investoren und Geschäftspartner, der das gesamte GlowUp-Ökosystem vorstellt — Marktdaten, Feature-Breakdowns und Executive Summaries für die Kunden-App und die Pro-App für Studios.",
+        "role": "Frontend — Next.js 16, TypeScript, Tailwind CSS"
+      },
+      "mhtravel": {
+        "tag": "Freelance · Web",
+        "title": "MhTravel",
+        "description": "Responsive Reisebuchungsplattform, freiberuflich für ein Reisebüro in Tunesien entwickelt, mit dynamischen Inhalten und Buchungsfunktionen auf Basis eines Node.js-/Express-/MySQL-Backends.",
+        "role": "Freelance — Next.js, React, Node.js, Express, MySQL"
+      }
+    }
+  },
+  "experience": {
+    "eyebrow": "Werdegang",
+    "title": "Wo ich gearbeitet habe",
+    "items": {
+      "freelance": {
+        "title": "Freelance Full-Stack-Entwickler",
+        "company": "Selbstständig",
+        "location": "Remote",
+        "description": "Eigenständige Entwicklung einer Reisebüro-Plattform (Web & Mobile) als Freelancer, parallel zur Weiterentwicklung der Beauty-Plattform GlowUp."
+      },
+      "tunidesign": {
+        "title": "Full-Stack-Entwickler",
+        "company": "TuniDesign",
+        "location": "Tunis, Tunesien",
+        "description": "Entwicklung von Web- und Mobile-Lösungen für eine tunesische Plattform für juristische Dienstleistungen. Erstellung von über 30 wiederverwendbaren UI-Komponenten, wodurch die Entwicklungszeit für Folgeprojekte um 35 % sank."
+      },
+      "croissantRouge": {
+        "title": "React-Entwickler",
+        "company": "Tunesischer Roter Halbmond",
+        "location": "Tunis, Tunesien · Ehrenamtlich",
+        "description": "Ehrenamtliche Mitarbeit im Dev-Team des Tunesischen Roten Halbmonds — Wartung und Optimierung interner Plattformen sowie REST-API-Integrationen."
+      },
+      "etafakna": {
+        "title": "Full-Stack-Entwickler",
+        "company": "E-tafakna",
+        "location": "Tunis, Tunesien",
+        "description": "Entwicklung eines interaktiven Admin-Dashboards (React, MUI, Chart.js) mit vollständigen CRUD-Operationen für 16 Datenentitäten. Reduzierung der SQL-Antwortzeiten um rund 40 % sowie Einführung von Artillery-Lasttests für kritische Endpunkte."
+      }
+    }
+  },
+  "contact": {
+    "eyebrow": "Kontakt",
+    "title": "Lass uns etwas Großartiges bauen.",
+    "subtitle": "Offen für Festanstellungen und Freelance-Projekte. Ich antworte in der Regel innerhalb eines Tages.",
+    "emailLabel": "E-Mail",
+    "phoneLabel": "Telefon",
+    "locationLabel": "Standort",
+    "locationValue": "Essen, Deutschland",
+    "availability": "Aktuell verfügbar",
+    "formName": "Name",
+    "formEmail": "E-Mail",
+    "formMessage": "Nachricht",
+    "formSend": "Nachricht senden",
+    "formSending": "Wird gesendet…",
+    "formSuccess": "Danke! Ihre Nachricht wurde gesendet — ich melde mich bald bei Ihnen.",
+    "formError": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut oder schreiben Sie mir direkt eine E-Mail."
+  },
+  "footer": {
+    "rights": "Alle Rechte vorbehalten.",
+    "builtWith": "Erstellt mit Next.js & Tailwind CSS."
+  }
+}

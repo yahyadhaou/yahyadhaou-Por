@@ -1,0 +1,150 @@
+{
+  "meta": {
+    "title": "Yahya Dhaou — Full-Stack Developer",
+    "description": "Full-stack developer specialized in React, Next.js and React Native. Based in Essen, Germany."
+  },
+  "nav": {
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "experience": "Experience",
+    "contact": "Contact"
+  },
+  "hero": {
+    "badge": "Available for new opportunities",
+    "greeting": "Hi, I'm",
+    "name": "Yahya Dhaou",
+    "role": "Full-Stack Developer",
+    "roleHighlight": "React · React Native · Next.js",
+    "tagline": "I design and build fast, reliable web and mobile products — from pixel-perfect interfaces to the APIs and databases behind them.",
+    "ctaContact": "Let's talk",
+    "ctaProjects": "View my work",
+    "ctaCv": "Download CV",
+    "statYears": "3+",
+    "statYearsLabel": "Years of experience",
+    "statProjects": "15+",
+    "statProjectsLabel": "Projects shipped",
+    "statLanguages": "3",
+    "statLanguagesLabel": "Languages spoken",
+    "scroll": "Scroll"
+  },
+  "about": {
+    "eyebrow": "About me",
+    "title": "Building products end to end, with care.",
+    "paragraph1": "I'm a full-stack developer based in Essen, Germany, specialized in React, Next.js and React Native, with solid backend skills in Node.js and SQL / NoSQL databases. I like owning a feature from the Figma file all the way to the production database.",
+    "paragraph2": "Over the past three years I've shipped a two-sided marketplace mobile platform, a freelance travel booking site, admin dashboards handling dozens of data entities, and 30+ reusable UI components used across projects.",
+    "paragraph3": "Originally from Tunisia, I relocated to Germany in 2025 and reached German C1 — I now work comfortably in English, French and German.",
+    "values": [
+      {
+        "title": "Clean code",
+        "description": "Maintainable, typed, and built to be read by the next person."
+      },
+      {
+        "title": "Performance",
+        "description": "Lazy loading, memoization and code-splitting by default, not as an afterthought."
+      },
+      {
+        "title": "Full ownership",
+        "description": "Comfortable across the stack — from UI polish to database schema design."
+      },
+      {
+        "title": "Continuous learning",
+        "description": "Currently exploring Docker, Kubernetes and applied AI tooling."
+      }
+    ]
+  },
+  "skills": {
+    "eyebrow": "Tech stack",
+    "title": "Tools I use to ship products",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "database": "Databases",
+      "tools": "Tools & DevOps"
+    }
+  },
+  "projects": {
+    "eyebrow": "Selected work",
+    "title": "Projects that shipped",
+    "subtitle": "A mix of product work and freelance delivery — mobile apps, dashboards and marketing sites.",
+    "viewLive": "Live demo",
+    "viewCode": "Source code",
+    "privateCode": "Private codebase (NDA)",
+    "screenshotsSoon": "Screenshots coming soon",
+    "visitSite": "Live product — click to explore",
+    "role": "My role",
+    "tabClient": "Client app",
+    "tabProvider": "Provider app",
+    "items": {
+      "glowupApp": {
+        "tag": "Product · Mobile",
+        "title": "GlowUp Beauty App",
+        "description": "A two-sided beauty marketplace for the German market. Clients discover verified beauty professionals and book appointments in real time, while providers manage their schedule, clients and earnings from a companion app.",
+        "role": "Full-stack — React Native (Expo) apps for client & provider, Node.js API, PostgreSQL"
+      },
+      "showcase": {
+        "tag": "Product · Web",
+        "title": "GlowUp — Product Showroom",
+        "description": "Bilingual (DE/EN) investor & business showroom presenting the whole GlowUp ecosystem — market data, feature breakdowns and executive summaries for both the client app and the Pro studio app.",
+        "role": "Frontend — Next.js 16, TypeScript, Tailwind CSS"
+      },
+      "mhtravel": {
+        "tag": "Freelance · Web",
+        "title": "MhTravel",
+        "description": "Responsive travel booking platform delivered as a freelance project for a travel agency in Tunisia, with dynamic content and booking flows on top of a Node.js / Express / MySQL backend.",
+        "role": "Freelance — Next.js, React, Node.js, Express, MySQL"
+      }
+    }
+  },
+  "experience": {
+    "eyebrow": "Career",
+    "title": "Where I've worked",
+    "items": {
+      "freelance": {
+        "title": "Freelance Full-Stack Developer",
+        "company": "Self-employed",
+        "location": "Remote",
+        "description": "Led end-to-end development for a freelance travel agency platform (web & mobile), while building the GlowUp beauty platform on the side."
+      },
+      "tunidesign": {
+        "title": "Full-Stack Developer",
+        "company": "TuniDesign",
+        "location": "Tunis, Tunisia",
+        "description": "Built web and mobile solutions for a Tunisian legal-services platform. Created 30+ reusable UI components, cutting development time for follow-up projects by 35%."
+      },
+      "croissantRouge": {
+        "title": "React Developer",
+        "company": "Croissant-Rouge Tunisien",
+        "location": "Tunis, Tunisia · Volunteer",
+        "description": "Volunteer work with the Tunisian Red Crescent dev team, maintaining and optimizing internal platforms and REST API integrations."
+      },
+      "etafakna": {
+        "title": "Full-Stack Developer",
+        "company": "E-tafakna",
+        "location": "Tunis, Tunisia",
+        "description": "Built an interactive admin dashboard (React, MUI, Chart.js) with full CRUD across 16 data entities. Reduced SQL response times by ~40% and added Artillery load tests for critical endpoints."
+      }
+    }
+  },
+  "contact": {
+    "eyebrow": "Get in touch",
+    "title": "Let's build something great.",
+    "subtitle": "Open to full-time roles and freelance projects. I usually reply within a day.",
+    "emailLabel": "Email",
+    "phoneLabel": "Phone",
+    "locationLabel": "Location",
+    "locationValue": "Essen, Germany",
+    "availability": "Currently available",
+    "formName": "Name",
+    "formEmail": "Email",
+    "formMessage": "Message",
+    "formSend": "Send message",
+    "formSending": "Sending…",
+    "formSuccess": "Thanks! Your message has been sent — I'll get back to you soon.",
+    "formError": "Something went wrong. Please try again or email me directly."
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "builtWith": "Built with Next.js & Tailwind CSS."
+  }
+}
