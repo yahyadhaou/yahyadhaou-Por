@@ -13,7 +13,7 @@ export function CvDownloadButton() {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="relative">
+    <div className="relative ml-[15px]">
       <button
         type="button"
         onClick={() => setOpen((v) => !v)}
@@ -42,7 +42,7 @@ export function CvDownloadButton() {
               key={v.key}
               href={v.href}
               download
-              onMouseDown={() => setOpen(false)}
+              onClick={() => setOpen(false)}
               className="block px-3.5 py-2.5 text-sm text-foreground/90 transition-colors hover:bg-white/5 hover:text-accent-b"
             >
               {t(v.key)}
