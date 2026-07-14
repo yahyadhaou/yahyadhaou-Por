@@ -131,6 +131,8 @@ export function Hero() {
           </div>
 
           <div className="glass-card flex items-center gap-3 rounded-full px-3 py-2">
+
+            
             {socialLinks.map((s) => (
               <a
                 key={s.label}
