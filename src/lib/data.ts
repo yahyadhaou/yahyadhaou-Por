@@ -121,7 +121,7 @@ export type ExperienceItem = {
 export const experience: ExperienceItem[] = [
   {
     id: "freelance",
-    period: "09.2024 — 08.2025",
+    period: "09.2024 — Now ",
     tags: ["React", "TypeScript", "Next.js", "React Native", "Node.js", "MySQL"],
   },
   {
