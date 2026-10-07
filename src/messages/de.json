@@ -78,7 +78,21 @@
     "role": "Meine Rolle",
     "tabClient": "Kunden-App",
     "tabProvider": "Anbieter-App",
+    "tabcraftsman": "Handwerker-App",
+    "tabadmin":"Admin",
     "items": {
+      "Homeservice": {
+        "tag": "Produkt · Mobile",
+        "title": "Home Service App",
+        "description": "HomeServices: Eine umfassende Plattform für Haushaltsdienstleistungen, von A bis Z.Ich habe eine vernetzte Plattform entwickelt, die ein echtes Problem für alle Beteiligten in der Wertschöpfungskette löst – von Privathaushalten bis hin zu Handwerksbetrieben.",
+        "role": "Full-Stack — React-Native-(Expo)-Apps für Kund:innen & Anbieter, Node.js-API, Mysql"
+      },
+      "homeServiceShowcase": {
+        "tag": "Produkt · Web",
+        "title": "HomeServices — Produkt-Showroom",
+        "description": "Zweisprachiger (EN/DE) Showroom, der die gesamte HomeServices-Plattform für den DACH-Markt vorstellt — die Kunden-App, die Partner-App für Betriebe, Mitarbeitende und Selbstständige sowie das Admin-Control-Center, mit Feature-Rundgängen und Decks zum Download.",
+        "role": "Frontend — Next.js, TypeScript, Tailwind CSS"
+      },
       "glowupApp": {
         "tag": "Produkt · Mobile",
         "title": "GlowUp Beauty App",

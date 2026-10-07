@@ -78,7 +78,22 @@
     "role": "Mon rôle",
     "tabClient": "App client",
     "tabProvider": "App prestataire",
+    "tabcraftsman": "App technicien",
+    "tabadmin":"Admin-web",
     "items": {
+        "Homeservice": {
+         "tag": "Produit · Mobile",
+         "title": "Application de services à domicile",
+        "description": "HomeServices : une plateforme complète de services à domicile, conçue de bout en bout. J'ai conçu et développé une plateforme connectée qui résout un problème concret pour tous les acteurs de la chaîne, des particuliers aux artisans.",
+       "role": "Full-Stack — Applications React Native (Expo) pour clients et prestataires, API Node.js, MySQL"
+}, 
+      
+      "homeServiceShowcase": {
+        "tag": "Produit · Web",
+        "title": "HomeServices — Vitrine produit",
+        "description": "Vitrine bilingue (EN/DE) présentant toute la plateforme HomeServices pour le marché DACH — l'app client, l'app partenaire pour entreprises, collaborateurs et indépendants, et le centre de contrôle admin, avec présentations des fonctionnalités et decks téléchargeables.",
+        "role": "Frontend — Next.js, TypeScript, Tailwind CSS"
+      },
       "glowupApp": {
         "tag": "Produit · Mobile",
         "title": "GlowUp Beauty App",

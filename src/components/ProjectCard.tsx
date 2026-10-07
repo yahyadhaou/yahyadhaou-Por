@@ -4,8 +4,15 @@ import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { useState } from "react";
 import { ChevronLeft, ChevronRight, ExternalLink } from "lucide-react";
-import type { Project } from "@/lib/data";
+import type { Project, ProjectGallery } from "@/lib/data";
 import { Reveal } from "./ui/Reveal";
+
+const galleryLabels: Record<ProjectGallery["key"], string> = {
+  client: "tabClient",
+  provider: "tabProvider",
+  coworker: "tabcraftsman",
+  admin: "tabadmin",
+};
 
 function DeviceMockup({ project }: { project: Project }) {
   if (project.type === "mobile") {
@@ -59,6 +66,7 @@ export function ProjectCard({
 
   const gallery = project.galleries?.[galleryIndex];
   const images = gallery ? gallery.images : project.images;
+  const viewType = gallery?.type ?? project.type;
 
   function selectGallery(i: number) {
     setGalleryIndex(i);
@@ -85,12 +93,16 @@ export function ProjectCard({
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className={`${
-                  project.type === "mobile" ? "object-contain py-6" : "object-cover"
+                  viewType === "mobile"
+                    ? "object-contain py-6"
+                    : project.galleries
+                      ? "object-contain pt-12"
+                      : "object-cover"
                 } transition-transform duration-500`}
               />
 
               {project.galleries && (
-                <div className="absolute left-3 top-3 flex gap-1.5">
+                <div className="absolute left-3 right-3 top-3 z-10 flex flex-wrap gap-1.5">
                   {project.galleries.map((g, i) => (
                     <button
                       key={g.key}
@@ -101,7 +113,7 @@ export function ProjectCard({
                           : "border-white/15 bg-black/40 text-white/70 hover:text-white"
                       }`}
                     >
-                      {t(g.key === "client" ? "tabClient" : "tabProvider")}
+                      {t(galleryLabels[g.key])}
                     </button>
                   ))}
                 </div>

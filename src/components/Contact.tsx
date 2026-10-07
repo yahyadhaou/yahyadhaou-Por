@@ -1,8 +1,7 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { useRef, useState } from "react";
-import emailjs from "@emailjs/browser";
 import { Section } from "./ui/Section";
 import { Reveal } from "./ui/Reveal";
 import { socials } from "@/lib/data";
@@ -11,37 +10,29 @@ type Status = "idle" | "sending" | "success" | "error";
 
 export function Contact() {
   const t = useTranslations("contact");
+  const locale = useLocale();
   const form = useRef<HTMLFormElement>(null);
   const [status, setStatus] = useState<Status>("idle");
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    if (!form.current) return;
-
-    const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
-    const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
-    const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
-
-    if (!serviceId || !templateId || !publicKey) {
-      console.error(
-        "EmailJS env vars are missing. Set NEXT_PUBLIC_EMAILJS_SERVICE_ID, NEXT_PUBLIC_EMAILJS_TEMPLATE_ID and NEXT_PUBLIC_EMAILJS_PUBLIC_KEY."
-      );
-      setStatus("error");
-      return;
-    }
+    const data = Object.fromEntries(new FormData(e.currentTarget));
 
     setStatus("sending");
 
-    emailjs.sendForm(serviceId, templateId, form.current, { publicKey }).then(
-      () => {
-        setStatus("success");
-        form.current?.reset();
-      },
-      (error) => {
-        console.error("EmailJS error:", error?.text ?? error);
-        setStatus("error");
-      }
-    );
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ...data, locale }),
+      });
+      if (!res.ok) throw new Error(`Contact API responded ${res.status}`);
+      setStatus("success");
+      form.current?.reset();
+    } catch (error) {
+      console.error(error);
+      setStatus("error");
+    }
   }
 
   const infoItems = [
@@ -98,6 +89,14 @@ export function Contact() {
             onSubmit={handleSubmit}
             className="glass-card flex h-full flex-col gap-4 rounded-3xl p-7 sm:p-9"
           >
+            <input
+              type="text"
+              name="company"
+              tabIndex={-1}
+              autoComplete="off"
+              aria-hidden="true"
+              className="hidden"
+            />
             <div>
               <label className="mb-1.5 block text-xs uppercase tracking-[0.15em] text-muted">
                 {t("formName")}
