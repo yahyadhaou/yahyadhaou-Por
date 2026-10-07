@@ -120,6 +120,7 @@ export const projects: Project[] = [
     type: "web",
     tech: ["Next.js", "TypeScript", "Tailwind CSS"],
     hasScreenshots: true,
+    live:"https://homeservicewebsite.netlify.app/",
     images: homeServiceShowcaseImages,
     accent: "from-sky-400 to-indigo-600",
   },
