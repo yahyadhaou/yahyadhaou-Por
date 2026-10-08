@@ -5,6 +5,8 @@ export const socials = {
   linkedin: "https://linkedin.com/in/yahya-dhaou-bb3862232",
 };
 
+export const homeServicesSite = "https://homeservicewebsite.netlify.app/";
+
 export const cvFiles = {
   en: "/cv/Yahya-Dhaou-CV-EN.pdf",
   de: "/cv/Yahya-Dhaou-CV-DE.pdf",
@@ -59,12 +61,11 @@ export type MoreProject = {
   galleries: Gallery[];
 };
 
-// TODO: set `live` for homeServicesShowroom once its Netlify URL is known.
 export const moreProjects: MoreProject[] = [
   {
     id: "homeServicesShowroom",
     tech: ["Next.js 16", "TypeScript", "Tailwind CSS 4", "Zod"],
-    live: undefined,
+    live: homeServicesSite,
     galleries: [
       {
         key: "site",

@@ -1,5 +1,5 @@
 import { useTranslations } from "next-intl";
-import { homeServicesGalleries, homeServicesStack, lifecycle } from "@/lib/data";
+import { homeServicesGalleries, homeServicesSite, homeServicesStack, lifecycle } from "@/lib/data";
 import { Gallery } from "../Gallery";
 import { Reveal } from "../ui/Reveal";
 
@@ -45,7 +45,17 @@ export function EditorialCaseStudy() {
             {t("titleStart")} <span className="serif-accent">{t("titleAccent")}</span>
           </h2>
         </div>
-        <p className="max-w-[440px] font-mono text-[13px] leading-relaxed text-text">{homeServicesStack.join(" · ")}</p>
+        <div className="flex max-w-[440px] flex-col items-start gap-3">
+          <p className="font-mono text-[13px] leading-relaxed text-text">{homeServicesStack.join(" · ")}</p>
+          <a
+            href={homeServicesSite}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex min-h-11 items-center rounded-full border border-ink px-5 text-sm font-medium transition-colors hover:bg-ink hover:text-paper"
+          >
+            {t("visitSite")} ↗
+          </a>
+        </div>
       </Reveal>
 
       <Reveal className="mb-10 grid grid-cols-3 gap-9">

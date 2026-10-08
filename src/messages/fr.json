@@ -61,6 +61,7 @@
     "role": "Tout : produit, design UI, les deux apps Expo, le tableau de bord Next.js, l'API, le schéma et les tests.",
     "lifecycleLabel": "Cycle de vie d'une réservation",
     "lifecycleNote": "Chaque transition est vérifiée contre une table de transitions autorisées et enregistrée dans un historique.",
+    "visitSite": "Voir le site produit",
     "galleryLabel": "Applications HomeServices",
     "views": {
       "customer": {

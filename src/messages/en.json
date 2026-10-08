@@ -61,6 +61,7 @@
     "role": "Everything: product, UI design, both Expo apps, the Next.js dashboard, the API, the schema and the tests.",
     "lifecycleLabel": "Booking lifecycle",
     "lifecycleNote": "Every transition is checked against an allowed-transitions map and written to a status history.",
+    "visitSite": "Visit the product site",
     "galleryLabel": "HomeServices apps",
     "views": {
       "customer": {

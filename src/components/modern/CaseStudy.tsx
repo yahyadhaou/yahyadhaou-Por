@@ -1,6 +1,6 @@
 import { useTranslations } from "next-intl";
-import { Hammer, Layers, UserRound } from "lucide-react";
-import { homeServicesGalleries, homeServicesStack, lifecycle } from "@/lib/data";
+import { ArrowUpRight, Hammer, Layers, UserRound } from "lucide-react";
+import { homeServicesGalleries, homeServicesSite, homeServicesStack, lifecycle } from "@/lib/data";
 import { Gallery } from "../Gallery";
 import { Reveal } from "../ui/Reveal";
 
@@ -53,13 +53,24 @@ export function ModernCaseStudy() {
             {t("titleStart")} <span className="text-highlight">{t("titleAccent")}</span>
           </h2>
         </div>
-        <ul className="flex max-w-[460px] flex-wrap gap-1.5">
-          {homeServicesStack.map((s) => (
-            <li key={s} className="rounded-full border border-rule bg-surface px-3 py-1 font-mono text-xs text-text">
-              {s}
-            </li>
-          ))}
-        </ul>
+        <div className="flex max-w-[460px] flex-col items-start gap-3">
+          <ul className="flex flex-wrap gap-1.5">
+            {homeServicesStack.map((s) => (
+              <li key={s} className="rounded-full border border-rule bg-surface px-3 py-1 font-mono text-xs text-text">
+                {s}
+              </li>
+            ))}
+          </ul>
+          <a
+            href={homeServicesSite}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex h-11 items-center gap-1.5 rounded-full bg-ink px-5 text-sm font-medium text-paper transition-transform hover:-translate-y-0.5"
+          >
+            {t("visitSite")}
+            <ArrowUpRight size={15} />
+          </a>
+        </div>
       </Reveal>
 
       <div className="mt-10 grid gap-4 md:grid-cols-3">
