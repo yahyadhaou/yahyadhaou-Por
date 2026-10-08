@@ -14,7 +14,7 @@ export default function Icon() {
           alignItems: "center",
           justifyContent: "center",
           borderRadius: 16,
-          background: "linear-gradient(135deg, #f472b6 0%, #a855f7 45%, #22d3ee 100%)",
+          background: "#111111",
         }}
       >
         <span
@@ -22,7 +22,7 @@ export default function Icon() {
             fontSize: 32,
             fontWeight: 800,
             letterSpacing: -1,
-            color: "#06070a",
+            color: "#f3f3f0",
             fontFamily: "sans-serif",
           }}
         >

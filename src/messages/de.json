@@ -1,167 +1,249 @@
 {
   "meta": {
     "title": "Yahya Dhaou — Full-Stack-Entwickler",
-    "description": "Full-Stack-Entwickler spezialisiert auf React, Next.js und React Native. Wohnhaft in Essen, Deutschland."
+    "description": "Full-Stack-Entwickler in Essen. React, React Native, Next.js und Node.js — vom Datenbankschema bis zum letzten Pixel."
   },
   "nav": {
-    "about": "Über mich",
-    "skills": "Kenntnisse",
-    "projects": "Projekte",
-    "experience": "Erfahrung",
-    "contact": "Kontakt"
+    "skip": "Zum Inhalt springen",
+    "primary": "Hauptnavigation",
+    "work": "Projekte",
+    "engineering": "Technik",
+    "experience": "Werdegang",
+    "contact": "Kontakt",
+    "openMenu": "Menü öffnen",
+    "closeMenu": "Menü schließen",
+    "language": "Sprache",
+    "toDark": "Dunkelmodus aktivieren",
+    "toLight": "Hellmodus aktivieren"
   },
   "hero": {
-    "badge": "Offen für neue Möglichkeiten",
-    "greeting": "Hallo, ich bin",
+    "badge": "Offen für Festanstellung & Freelance",
+    "titleStart": "Ich baue Produkte von Anfang bis Ende —",
+    "titleAccent": "vom Schema bis zum letzten Pixel.",
+    "intro": "Full-Stack-Entwickler in Essen — React, React Native und Next.js im Frontend, Node.js und SQL dahinter. Mein neuestes Projekt ist HomeServices: ein Marktplatz für Handwerksleistungen mit drei Apps für den deutschen Markt, konzipiert und entwickelt vom Datenbankschema bis in den App Store.",
+    "ctaCase": "Zur Fallstudie",
+    "ctaContact": "Kontakt aufnehmen",
+    "factsLabel": "Auf einen Blick",
     "name": "Yahya Dhaou",
     "role": "Full-Stack-Entwickler",
-    "roleHighlight": "React · React Native · Next.js",
-    "tagline": "Ich entwickle schnelle, zuverlässige Web- und Mobile-Produkte — von pixelgenauen Interfaces bis zu den APIs und Datenbanken dahinter.",
-    "ctaContact": "Kontakt aufnehmen",
-    "ctaProjects": "Projekte ansehen",
-    "ctaCv": "Lebenslauf herunterladen",
-    "cvChoose": "Version auswählen",
-    "cvGerman": "Deutsch",
-    "cvEnglish": "Englisch",
-    "statYears": "3+",
-    "statYearsLabel": "Jahre Erfahrung",
-    "statProjects": "15+",
-    "statProjectsLabel": "Umgesetzte Projekte",
-    "statLanguages": "3",
-    "statLanguagesLabel": "Gesprochene Sprachen",
-    "scroll": "Scrollen"
+    "photoAlt": "Porträt von Yahya Dhaou",
+    "facts": {
+      "based": "Standort",
+      "basedValue": "Essen, Deutschland",
+      "experience": "Erfahrung",
+      "experienceValue": "3+ Jahre · 4 Teams",
+      "languages": "Sprachen",
+      "languagesValue": "Deutsch C1 · Englisch · Französisch",
+      "stack": "Kern-Stack",
+      "stackValue": "React · RN · Next.js · Node",
+      "openTo": "Offen für",
+      "openToValue": "Festanstellung · Freelance"
+    },
+    "cvEn": "CV — English",
+    "cvDe": "Lebenslauf — Deutsch"
   },
-  "about": {
-    "eyebrow": "Über mich",
-    "title": "Produkte von Anfang bis Ende — mit Sorgfalt.",
-    "paragraph1": "Ich bin Full-Stack-Entwickler mit Sitz in Essen, spezialisiert auf React, Next.js und React Native, mit soliden Backend-Kenntnissen in Node.js sowie SQL- und NoSQL-Datenbanken. Am liebsten verantworte ich ein Feature von der Figma-Datei bis zur Produktionsdatenbank.",
-    "paragraph2": "In den letzten drei Jahren habe ich eine zweiseitige Marketplace-App, eine freiberuflich entwickelte Reisebuchungsplattform, Admin-Dashboards für Dutzende Datenentitäten sowie über 30 wiederverwendbare UI-Komponenten für mehrere Projekte umgesetzt.",
-    "paragraph3": "Ursprünglich aus Tunesien, bin ich 2025 nach Deutschland gezogen und habe das Sprachniveau C1 erreicht — ich arbeite heute sicher auf Englisch, Französisch und Deutsch.",
-    "values": [
-      {
-        "title": "Sauberer Code",
-        "description": "Wartbar, typisiert und so geschrieben, dass ihn die nächste Person versteht."
+  "results": {
+    "label": "Ergebnisse",
+    "r1": { "value": "−40 %", "text": "SQL-Antwortzeit in einem Admin-System mit 16 Entitäten" },
+    "r2": { "value": "−35 %", "text": "Entwicklungszeit bei Folgeprojekten durch 30+ geteilte Komponenten" },
+    "r3": { "value": "34", "text": "API-Integrationstests auf einer isolierten, bei jedem Lauf neu aufgebauten Datenbank" },
+    "r4": { "value": "3", "text": "Apps auf einer API — Kunde, Anbieter und Admin" }
+  },
+  "caseStudy": {
+    "eyebrow": "Neuestes Projekt · Fallstudie",
+    "titleStart": "HomeServices —",
+    "titleAccent": "ein Marktplatz für Handwerker in Deutschland.",
+    "problemLabel": "Das Problem",
+    "problem": "Einen Klempner zu buchen heißt: Telefon-Ping-Pong und unklare Preise. Handwerksbetriebe erleben dasselbe Chaos von der anderen Seite — Anfragen, Teams und Termine auf Papier.",
+    "builtLabel": "Was ich gebaut habe",
+    "built": "Eine Kunden-App, eine Anbieter-App für Betriebsleiter, ihre Mitarbeitenden und Selbstständige sowie ein Admin-Dashboard — auf einer Express-API und einer MySQL-Datenbank.",
+    "roleLabel": "Meine Rolle",
+    "role": "Alles: Produkt, UI-Design, beide Expo-Apps, das Next.js-Dashboard, die API, das Schema und die Tests.",
+    "lifecycleLabel": "Lebenszyklus einer Buchung",
+    "lifecycleNote": "Jeder Übergang wird gegen eine Liste erlaubter Übergänge geprüft und in einer Statushistorie gespeichert.",
+    "galleryLabel": "HomeServices-Apps",
+    "views": {
+      "customer": {
+        "kicker": "Kund:innen · iOS / Android",
+        "title": "Kunden-App",
+        "text": "Anbieter vergleichen, buchen, bezahlen, chatten und bewerten — plus ein Umzugsplaner, der Preise offline berechnet."
       },
-      {
-        "title": "Performance",
-        "description": "Lazy Loading, Memoization und Code-Splitting von Anfang an, nicht nachträglich."
+      "manager": {
+        "kicker": "Betriebsleiter",
+        "title": "Anbieter-App — Betriebsleiter",
+        "text": "Anfragen erhalten, bestätigen, Mitarbeitende zuweisen und Team sowie Firmenprofil verwalten."
       },
-      {
-        "title": "Volle Verantwortung",
-        "description": "Sicher über den gesamten Stack hinweg — vom UI-Feinschliff bis zum Datenbankschema."
+      "worker": {
+        "kicker": "Mitarbeitende & Selbstständige",
+        "title": "Anbieter-App — Mitarbeitende",
+        "text": "Zugewiesene Aufträge sehen, starten und einen Abschlussbericht mit Fotos senden."
       },
-      {
-        "title": "Kontinuierliches Lernen",
-        "description": "Aktuell vertiefe ich mich in Docker, Kubernetes und angewandte KI-Tools."
+      "admin": {
+        "kicker": "Plattform-Team · Web",
+        "title": "Admin-Dashboard",
+        "text": "Anbieter freigeben oder ablehnen, Konten sperren, Bewertungen moderieren und jede Entität im Detail ansehen."
       }
-    ]
-  },
-  "skills": {
-    "eyebrow": "Tech-Stack",
-    "title": "Werkzeuge, mit denen ich Produkte umsetze",
-    "categories": {
-      "frontend": "Frontend",
-      "backend": "Backend",
-      "database": "Datenbanken",
-      "tools": "Tools & DevOps"
     }
   },
-  "projects": {
-    "eyebrow": "Ausgewählte Projekte",
-    "title": "Projekte, die live gegangen sind",
-    "subtitle": "Eine Mischung aus Produktarbeit und Freelance-Projekten — mobile Apps, Dashboards und Marketing-Websites.",
-    "viewLive": "Live-Demo",
-    "viewCode": "Quellcode",
-    "privateCode": "Privater Code (NDA)",
-    "screenshotsSoon": "Screenshots folgen in Kürze",
-    "visitSite": "Live-Produkt — zum Entdecken klicken",
-    "role": "Meine Rolle",
-    "tabClient": "Kunden-App",
-    "tabProvider": "Anbieter-App",
-    "tabcraftsman": "Handwerker-App",
-    "tabadmin":"Admin",
-    "items": {
-      "Homeservice": {
-        "tag": "Produkt · Mobile",
-        "title": "Home Service App",
-        "description": "HomeServices: Eine umfassende Plattform für Haushaltsdienstleistungen, von A bis Z.Ich habe eine vernetzte Plattform entwickelt, die ein echtes Problem für alle Beteiligten in der Wertschöpfungskette löst – von Privathaushalten bis hin zu Handwerksbetrieben.",
-        "role": "Full-Stack — React-Native-(Expo)-Apps für Kund:innen & Anbieter, Node.js-API, Mysql"
+  "gallery": {
+    "prev": "Vorheriger Screenshot",
+    "next": "Nächster Screenshot",
+    "counter": "{current} / {total}",
+    "alt": "{title} — Screenshot {n} von {total}",
+    "hint": "Mit ← → Tasten oder wischen",
+    "tabs": {
+      "customer": "Kunden-App",
+      "manager": "Anbieter · Leitung",
+      "worker": "Anbieter · Mitarbeitende",
+      "admin": "Admin-Dashboard",
+      "client": "Kunde",
+      "provider": "Anbieter",
+      "site": "Website"
+    }
+  },
+  "engineering": {
+    "eyebrow": "Unter der Haube",
+    "titleStart": "Wie HomeServices",
+    "titleAccent": "gebaut ist",
+    "meta": "3 Clients · 12 API-Module · 30 Modelle",
+    "diagramLabel": "Architekturdiagramm",
+    "nodes": {
+      "customer": { "tag": "Kund:innen", "title": "Kunden-App", "meta": "expo · react native · REST + JWT" },
+      "provider": { "tag": "Leitung · Mitarbeitende · Selbstständige", "title": "Anbieter-App", "meta": "expo · react native · REST + JWT" },
+      "admin": { "tag": "Plattform-Team", "title": "Admin-Dashboard", "meta": "next.js 16 · BFF · httpOnly-Cookies" }
+    },
+    "flow": "Routes (RBAC + Zod) → Controller → Service → Sequelize",
+    "api": { "tag": "API", "title": "Express-REST-API", "text": "Auth · Buchungen · Betriebe · Mitarbeitende · Nachrichten · Benachrichtigungen · Zahlungen · Bewertungen · Admin …" },
+    "push": { "tag": "Asynchron", "title": "Expo-Push", "text": "Fire-and-forget, nachdem der Datensatz geschrieben ist" },
+    "db": { "tag": "Eine Quelle der Wahrheit", "title": "MySQL 8" },
+    "decisionsTitle": "Entscheidungen, die ich im Review verteidigen würde",
+    "decisions": {
+      "d1": {
+        "tag": "Datenmodell",
+        "title": "Buchung und Auftrag sind dieselbe Zeile",
+        "text": "Die Buchung der Kundin und der Auftrag des Anbieters sind ein Datensatz aus zwei Blickwinkeln — nichts zu synchronisieren, nichts kann auseinanderlaufen.",
+        "note": "Trade-off: Snapshot-Spalten halten eine Buchung auch nach Profiländerungen korrekt."
       },
-      "homeServiceShowcase": {
-        "tag": "Produkt · Web",
-        "title": "HomeServices — Produkt-Showroom",
-        "description": "Zweisprachiger (EN/DE) Showroom, der die gesamte HomeServices-Plattform für den DACH-Markt vorstellt — die Kunden-App, die Partner-App für Betriebe, Mitarbeitende und Selbstständige sowie das Admin-Control-Center, mit Feature-Rundgängen und Decks zum Download.",
-        "role": "Frontend — Next.js, TypeScript, Tailwind CSS"
+      "d2": {
+        "tag": "Sicherheit",
+        "title": "404 statt 403 bei fremden Daten",
+        "text": "Rollen werden in den Routes geprüft, Eigentum im Service direkt bei der Abfrage. Fragt ein Betriebsleiter die Buchung eines anderen Betriebs ab, bekommt er „nicht gefunden“ — die Existenz bleibt verborgen.",
+        "note": "Beleg: Eine eigene Testdatei greift das gezielt von außen an."
+      },
+      "d3": {
+        "tag": "Sessions",
+        "title": "Sperren wirken sofort",
+        "text": "Access-Tokens mit 15 Minuten Laufzeit, gehashte Refresh-Tokens mit Rotation bei jeder Nutzung und eine Nutzerprüfung bei jeder Anfrage — eine Sperre wartet nicht auf den Ablauf eines Tokens.",
+        "note": "Trade-off: eine zusätzliche Abfrage pro Request für sofortigen Widerruf."
+      },
+      "d4": {
+        "tag": "Datenschutz",
+        "title": "Bankdaten erreichen nie den Browser",
+        "text": "IBAN und BIC werden feldweise mit AES-256-GCM verschlüsselt. Die Admin-API sendet sie überhaupt nicht — nur ein Flag „Auszahlung hinterlegt“ — denn was die Oberfläche versteckt, steht trotzdem im Netzwerk-Tab.",
+        "note": "Der Schlüssel liegt nur in der Umgebung; es gibt keinen Klartext-Fallback."
+      },
+      "d5": {
+        "tag": "Zahlungen",
+        "title": "PSP-first, bewusst simuliert",
+        "text": "Ausgelegt für einen Split-Payment-Ansatz wie Stripe Connect: Es werden nur PSP-Tokens gespeichert, nie Kartennummern. So bleibt die Plattform außerhalb des PCI-Scopes und der BaFin-Lizenzfrage.",
+        "note": "Preise sind Bruttopreise (19 % MwSt.); die 12 % Plattformgebühr wird serverseitig berechnet."
+      },
+      "d6": {
+        "tag": "Tests",
+        "title": "Eine Testdatenbank, die bei jedem Lauf neu entsteht",
+        "text": "Jest und Supertest laufen gegen eine Datenbank, die vor jedem Lauf gelöscht und neu angelegt wird. Das hat einen echten Pagination-Flake durch Altdaten behoben.",
+        "note": "Abgesichert, sodass nur eine *_test-Datenbank gelöscht werden kann."
+      }
+    },
+    "alsoTitle": "Außerdem umgesetzt",
+    "nextTitle": "Was ich als Nächstes tun würde",
+    "next1": "Eine CI-Pipeline, die Lint und Tests bei jedem Push ausführt",
+    "next2": "Row Locking bei Buchungsübergängen gegen Race Conditions",
+    "next3": "Frontend-Tests und eine echte Anbindung an einen Zahlungsanbieter"
+  },
+  "more": {
+    "titleStart": "Weitere",
+    "titleAccent": "Projekte",
+    "count": "{count} Projekte",
+    "visitLive": "Live-Seite ansehen",
+    "viewCode": "Code ansehen",
+    "privateCode": "Privater Code",
+    "items": {
+      "homeServicesShowroom": {
+        "tag": "Web · EN / DE",
+        "title": "HomeServices Showroom",
+        "description": "Zweisprachige Produktseite für Partner und Investoren: Screenshot-Galerie aller drei Apps, Pitch-Decks zum Download und ein funktionierendes Kontaktformular."
       },
       "glowupApp": {
-        "tag": "Produkt · Mobile",
+        "tag": "Mobile · Marktplatz",
         "title": "GlowUp Beauty App",
-        "description": "Ein zweiseitiger Beauty-Marktplatz für den deutschen Markt. Kund:innen finden verifizierte Beauty-Profis und buchen Termine in Echtzeit, während Anbieter:innen Termine, Kund:innen und Einnahmen über eine eigene App verwalten.",
-        "role": "Full-Stack — React-Native-(Expo)-Apps für Kund:innen & Anbieter, Node.js-API, PostgreSQL"
+        "description": "Zweiseitiger Beauty-Marktplatz für Deutschland: Kund:innen buchen verifizierte Profis in Echtzeit; Anbieter verwalten Termine, Kund:innen und Einnahmen in einer eigenen App."
       },
-      "showcase": {
-        "tag": "Produkt · Web",
-        "title": "GlowUp — Produkt-Showroom",
-        "description": "Zweisprachiger (DE/EN) Showroom für Investoren und Geschäftspartner, der das gesamte GlowUp-Ökosystem vorstellt — Marktdaten, Feature-Breakdowns und Executive Summaries für die Kunden-App und die Pro-App für Studios.",
-        "role": "Frontend — Next.js 16, TypeScript, Tailwind CSS"
+      "glowupShowroom": {
+        "tag": "Web · DE / EN",
+        "title": "GlowUp Showroom",
+        "description": "Showroom für Investoren und Partner des GlowUp-Ökosystems — Marktdaten, Feature-Überblick und Executive Summaries für beide Apps."
       },
       "mhtravel": {
         "tag": "Freelance · Web",
         "title": "MhTravel",
-        "description": "Responsive Reisebuchungsplattform, freiberuflich für ein Reisebüro in Tunesien entwickelt, mit dynamischen Inhalten und Buchungsfunktionen auf Basis eines Node.js-/Express-/MySQL-Backends.",
-        "role": "Freelance — Next.js, React, Node.js, Express, MySQL"
+        "description": "Reisebuchungsplattform für eine Agentur in Tunesien — dynamische Inhalte und Buchungsabläufe auf einem Node.js-/Express-/MySQL-Backend."
       }
     }
   },
+  "about": {
+    "eyebrow": "Über mich",
+    "titleStart": "Von Tunis nach Essen —",
+    "titleAccent": "und immer live gegangen.",
+    "text": "Ich übernehme ein Feature gern von der Figma-Datei bis zur Produktionsdatenbank. 2025 bin ich von Tunesien nach Deutschland gezogen, habe Deutsch auf C1-Niveau erreicht und arbeite täglich auf Deutsch, Englisch und Französisch.",
+    "toolboxLabel": "Werkzeuge"
+  },
   "experience": {
-    "eyebrow": "Werdegang",
-    "title": "Wo ich gearbeitet habe",
+    "label": "Berufserfahrung",
+    "now": "heute",
     "items": {
       "freelance": {
-        "title": "Freelance Full-Stack-Entwickler",
-        "company": "Selbstständig",
-        "location": "Remote",
-        "description": "Eigenständige Entwicklung einer Reisebüro-Plattform (Web & Mobile) als Freelancer, parallel zur Weiterentwicklung der Beauty-Plattform GlowUp."
+        "title": "Freiberuflicher Full-Stack-Entwickler",
+        "description": "HomeServices und GlowUp von Anfang bis Ende konzipiert und entwickelt; Buchungsplattform für ein Reisebüro umgesetzt."
       },
       "tunidesign": {
-        "title": "Full-Stack-Entwickler",
-        "company": "TuniDesign",
-        "location": "Tunis, Tunesien",
-        "description": "Entwicklung von Web- und Mobile-Lösungen für eine tunesische Plattform für juristische Dienstleistungen. Erstellung von über 30 wiederverwendbaren UI-Komponenten, wodurch die Entwicklungszeit für Folgeprojekte um 35 % sank."
+        "title": "Full-Stack-Entwickler · TuniDesign",
+        "description": "Web und Mobile für eine Plattform für Rechtsdienstleistungen. 30+ geteilte UI-Komponenten, die die Entwicklungszeit von Folgeprojekten um 35 % verkürzt haben."
       },
       "croissantRouge": {
-        "title": "React-Entwickler",
-        "company": "Tunesischer Roter Halbmond",
-        "location": "Tunis, Tunesien · Ehrenamtlich",
-        "description": "Ehrenamtliche Mitarbeit im Dev-Team des Tunesischen Roten Halbmonds — Wartung und Optimierung interner Plattformen sowie REST-API-Integrationen."
+        "title": "React-Entwickler · Croissant-Rouge Tunisien",
+        "description": "Ehrenamtlich: Wartung und Optimierung interner Plattformen und REST-API-Integrationen."
       },
       "etafakna": {
-        "title": "Full-Stack-Entwickler",
-        "company": "E-tafakna",
-        "location": "Tunis, Tunesien",
-        "description": "Entwicklung eines interaktiven Admin-Dashboards (React, MUI, Chart.js) mit vollständigen CRUD-Operationen für 16 Datenentitäten. Reduzierung der SQL-Antwortzeiten um rund 40 % sowie Einführung von Artillery-Lasttests für kritische Endpunkte."
+        "title": "Full-Stack-Entwickler · E-tafakna",
+        "description": "Admin-Dashboard mit CRUD über 16 Entitäten; SQL-Antwortzeiten um ca. 40 % reduziert und Artillery-Lasttests ergänzt."
       }
     }
   },
   "contact": {
     "eyebrow": "Kontakt",
-    "title": "Lass uns etwas Großartiges bauen.",
-    "subtitle": "Offen für Festanstellungen und Freelance-Projekte. Ich antworte in der Regel innerhalb eines Tages.",
+    "titleStart": "Lassen Sie uns",
+    "titleAccent": "etwas Gutes bauen.",
+    "subtitle": "Ich antworte innerhalb eines Werktages — auf Deutsch, Englisch oder Französisch.",
     "emailLabel": "E-Mail",
     "phoneLabel": "Telefon",
-    "locationLabel": "Standort",
-    "locationValue": "Essen, Deutschland",
-    "availability": "Aktuell verfügbar",
-    "formName": "Name",
+    "elsewhereLabel": "Profile",
+    "formTopic": "Worum geht es?",
+    "topicJob": "Festanstellung",
+    "topicFreelance": "Freelance-Projekt",
+    "topicOther": "Etwas anderes",
+    "formName": "Ihr Name",
     "formEmail": "E-Mail",
     "formMessage": "Nachricht",
+    "formPlaceholder": "Ein paar Zeilen zur Stelle oder zum Projekt …",
     "formSend": "Nachricht senden",
-    "formSending": "Wird gesendet…",
-    "formSuccess": "Danke! Ihre Nachricht wurde gesendet — ich melde mich bald bei Ihnen.",
-    "formError": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut oder schreiben Sie mir direkt eine E-Mail."
+    "formSending": "Wird gesendet …",
+    "formNote": "Sie erhalten sofort eine Bestätigung per E-Mail in Ihrer Sprache.",
+    "formSuccess": "Vielen Dank — Ihre Nachricht ist unterwegs. Eine Bestätigung liegt in Ihrem Postfach.",
+    "formError": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut oder schreiben Sie mir direkt."
   },
   "footer": {
-    "rights": "Alle Rechte vorbehalten.",
-    "builtWith": "Erstellt mit Next.js & Tailwind CSS."
+    "location": "Essen, Deutschland",
+    "builtWith": "Umgesetzt mit Next.js, TypeScript & Tailwind CSS"
   }
 }

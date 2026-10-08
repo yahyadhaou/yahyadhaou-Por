@@ -1,168 +1,249 @@
 {
   "meta": {
     "title": "Yahya Dhaou — Développeur Full-Stack",
-    "description": "Développeur full-stack spécialisé en React, Next.js et React Native. Basé à Essen, Allemagne."
+    "description": "Développeur full-stack à Essen, Allemagne. React, React Native, Next.js et Node.js — du schéma de base de données jusqu'au dernier pixel."
   },
   "nav": {
-    "about": "À propos",
-    "skills": "Compétences",
-    "projects": "Projets",
-    "experience": "Expérience",
-    "contact": "Contact"
+    "skip": "Aller au contenu",
+    "primary": "Navigation principale",
+    "work": "Projets",
+    "engineering": "Ingénierie",
+    "experience": "Parcours",
+    "contact": "Contact",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu",
+    "language": "Langue",
+    "toDark": "Passer en mode sombre",
+    "toLight": "Passer en mode clair"
   },
   "hero": {
-    "badge": "Disponible pour de nouvelles opportunités",
-    "greeting": "Salut, je suis",
+    "badge": "Ouvert aux CDI et aux missions freelance",
+    "titleStart": "Je construis des produits de bout en bout —",
+    "titleAccent": "du schéma jusqu'au dernier pixel.",
+    "intro": "Développeur full-stack à Essen — React, React Native et Next.js côté front, Node.js et SQL derrière. Mon dernier projet est HomeServices : une marketplace de services à domicile en trois applications pour le marché allemand, conçue et développée du schéma de base de données jusqu'à l'App Store.",
+    "ctaCase": "Lire l'étude de cas",
+    "ctaContact": "Me contacter",
+    "factsLabel": "En bref",
     "name": "Yahya Dhaou",
-    "role": "Développeur Full-Stack",
-    "roleHighlight": "React · React Native · Next.js",
-    "tagline": "Je conçois et développe des produits web et mobiles rapides et fiables — des interfaces soignées jusqu'aux API et bases de données qui les font tourner.",
-    "ctaContact": "Discutons",
-    "ctaProjects": "Voir mes projets",
-    "ctaCv": "Télécharger le CV",
-    "cvChoose": "Choisir une version",
-    "cvEnglish": "Anglais",
-    "cvGerman": "Allemand",
-    "statYears": "3+",
-    "statYearsLabel": "Années d'expérience",
-    "statProjects": "15+",
-    "statProjectsLabel": "Projets livrés",
-    "statLanguages": "3",
-    "statLanguagesLabel": "Langues parlées",
-    "scroll": "Défiler"
+    "role": "Développeur full-stack",
+    "photoAlt": "Portrait de Yahya Dhaou",
+    "facts": {
+      "based": "Basé à",
+      "basedValue": "Essen, Allemagne",
+      "experience": "Expérience",
+      "experienceValue": "3+ ans · 4 équipes",
+      "languages": "Langues",
+      "languagesValue": "Allemand C1 · Anglais · Français",
+      "stack": "Stack principale",
+      "stackValue": "React · RN · Next.js · Node",
+      "openTo": "Ouvert à",
+      "openToValue": "CDI · Freelance"
+    },
+    "cvEn": "CV — English",
+    "cvDe": "CV — Deutsch"
   },
-  "about": {
-    "eyebrow": "À propos de moi",
-    "title": "Je construis des produits de bout en bout, avec soin.",
-    "paragraph1": "Je suis développeur full-stack basé à Essen, en Allemagne, spécialisé en React, Next.js et React Native, avec de solides bases backend en Node.js et bases de données SQL / NoSQL. J'aime porter une fonctionnalité du fichier Figma jusqu'à la base de données en production.",
-    "paragraph2": "Au cours des trois dernières années, j'ai livré une plateforme mobile de marketplace à deux versants, un site de réservation de voyages en freelance, des tableaux de bord admin gérant des dizaines d'entités de données, ainsi que 30+ composants UI réutilisables partagés entre projets.",
-    "paragraph3": "Originaire de Tunisie, j'ai déménagé en Allemagne en 2025 et atteint le niveau C1 en allemand — je travaille aujourd'hui aussi bien en anglais, en français qu'en allemand.",
-    "values": [
-      {
-        "title": "Code propre",
-        "description": "Maintenable, typé, et pensé pour être lu par la personne suivante."
+  "results": {
+    "label": "Résultats",
+    "r1": { "value": "−40 %", "text": "de temps de réponse SQL sur un back-office de 16 entités" },
+    "r2": { "value": "−35 %", "text": "de temps de développement grâce à 30+ composants partagés" },
+    "r3": { "value": "34", "text": "tests d'intégration API sur une base isolée, recréée à chaque exécution" },
+    "r4": { "value": "3", "text": "applications sur une seule API — client, prestataire et admin" }
+  },
+  "caseStudy": {
+    "eyebrow": "Dernier projet · Étude de cas",
+    "titleStart": "HomeServices —",
+    "titleAccent": "une marketplace de réparations à domicile pour l'Allemagne.",
+    "problemLabel": "Le problème",
+    "problem": "Réserver un plombier, c'est des appels sans réponse et des prix flous. Les artisans vivent le même chaos de l'autre côté — demandes, équipes et plannings sur papier.",
+    "builtLabel": "Ce que j'ai construit",
+    "built": "Une app client, une app prestataire pour les gérants d'entreprise, leurs employés et les indépendants, et un tableau de bord admin — sur une seule API Express et une seule base MySQL.",
+    "roleLabel": "Mon rôle",
+    "role": "Tout : produit, design UI, les deux apps Expo, le tableau de bord Next.js, l'API, le schéma et les tests.",
+    "lifecycleLabel": "Cycle de vie d'une réservation",
+    "lifecycleNote": "Chaque transition est vérifiée contre une table de transitions autorisées et enregistrée dans un historique.",
+    "galleryLabel": "Applications HomeServices",
+    "views": {
+      "customer": {
+        "kicker": "Clients · iOS / Android",
+        "title": "App client",
+        "text": "Comparer les prestataires, réserver, payer, discuter et noter — plus un planificateur de déménagement qui calcule les prix hors ligne."
       },
-      {
-        "title": "Performance",
-        "description": "Lazy loading, mémoïsation et code-splitting par défaut, pas en dernière minute."
+      "manager": {
+        "kicker": "Gérants d'entreprise",
+        "title": "App prestataire — gérant",
+        "text": "Recevoir les demandes, confirmer, assigner les employés et gérer l'équipe et le profil de l'entreprise."
       },
-      {
-        "title": "Autonomie totale",
-        "description": "À l'aise sur toute la stack — du polish UI à la conception du schéma de base de données."
+      "worker": {
+        "kicker": "Employés et indépendants",
+        "title": "App prestataire — employé",
+        "text": "Voir les missions assignées, les démarrer et envoyer un rapport de fin d'intervention avec photos."
       },
-      {
-        "title": "Apprentissage continu",
-        "description": "J'explore actuellement Docker, Kubernetes et les outils d'IA appliquée."
+      "admin": {
+        "kicker": "Équipe plateforme · Web",
+        "title": "Tableau de bord admin",
+        "text": "Valider ou refuser les prestataires, suspendre des comptes, modérer les avis et explorer chaque entité."
       }
-    ]
-  },
-  "skills": {
-    "eyebrow": "Stack technique",
-    "title": "Les outils avec lesquels je livre mes produits",
-    "categories": {
-      "frontend": "Frontend",
-      "backend": "Backend",
-      "database": "Bases de données",
-      "tools": "Outils & DevOps"
     }
   },
-  "projects": {
-    "eyebrow": "Travaux sélectionnés",
-    "title": "Des projets livrés",
-    "subtitle": "Un mélange de produits internes et de missions freelance — applications mobiles, tableaux de bord et sites vitrines.",
-    "viewLive": "Démo en ligne",
-    "viewCode": "Code source",
-    "privateCode": "Code privé (NDA)",
-    "screenshotsSoon": "Captures d'écran à venir",
-    "visitSite": "Produit en ligne — cliquez pour explorer",
-    "role": "Mon rôle",
-    "tabClient": "App client",
-    "tabProvider": "App prestataire",
-    "tabcraftsman": "App technicien",
-    "tabadmin":"Admin-web",
+  "gallery": {
+    "prev": "Capture précédente",
+    "next": "Capture suivante",
+    "counter": "{current} / {total}",
+    "alt": "{title} — capture {n} sur {total}",
+    "hint": "Touches ← → ou glisser",
+    "tabs": {
+      "customer": "App client",
+      "manager": "Prestataire · Gérant",
+      "worker": "Prestataire · Employé",
+      "admin": "Tableau de bord admin",
+      "client": "Client",
+      "provider": "Prestataire",
+      "site": "Site web"
+    }
+  },
+  "engineering": {
+    "eyebrow": "Sous le capot",
+    "titleStart": "Comment HomeServices",
+    "titleAccent": "est conçu",
+    "meta": "3 clients · 12 modules API · 30 modèles",
+    "diagramLabel": "Schéma d'architecture",
+    "nodes": {
+      "customer": { "tag": "Clients", "title": "App client", "meta": "expo · react native · REST + JWT" },
+      "provider": { "tag": "Gérants · employés · indépendants", "title": "App prestataire", "meta": "expo · react native · REST + JWT" },
+      "admin": { "tag": "Équipe plateforme", "title": "Tableau de bord admin", "meta": "next.js 16 · BFF · cookies httpOnly" }
+    },
+    "flow": "routes (RBAC + Zod) → contrôleur → service → Sequelize",
+    "api": { "tag": "API", "title": "API REST Express", "text": "auth · réservations · entreprises · employés · messages · notifications · paiements · avis · admin …" },
+    "push": { "tag": "Asynchrone", "title": "Push Expo", "text": "envoyé sans bloquer, une fois la ligne écrite" },
+    "db": { "tag": "Source unique de vérité", "title": "MySQL 8" },
+    "decisionsTitle": "Des choix que je défendrais en revue",
+    "decisions": {
+      "d1": {
+        "tag": "Modèle de données",
+        "title": "Une réservation et une mission sont la même ligne",
+        "text": "La réservation du client et la mission du prestataire sont un seul enregistrement vu de deux côtés — rien à synchroniser, aucune divergence possible.",
+        "note": "Compromis : des colonnes « instantané » gardent la réservation exacte après une modification de profil."
+      },
+      "d2": {
+        "tag": "Sécurité",
+        "title": "404, pas 403, sur les données d'autrui",
+        "text": "Les rôles sont vérifiés dans les routes, la propriété dans les services, à côté de la requête. Un gérant qui demande la réservation d'une autre entreprise reçoit « introuvable » — l'existence ne fuit jamais.",
+        "note": "Preuve : un fichier de tests dédié l'attaque depuis l'extérieur."
+      },
+      "d3": {
+        "tag": "Sessions",
+        "title": "Les suspensions s'appliquent immédiatement",
+        "text": "Jetons d'accès de 15 minutes, jetons de rafraîchissement hachés et renouvelés à chaque usage, et une revérification de l'utilisateur à chaque requête — une suspension n'attend pas l'expiration d'un jeton.",
+        "note": "Compromis : une lecture de plus par requête, contre une révocation instantanée."
+      },
+      "d4": {
+        "tag": "Confidentialité",
+        "title": "Les coordonnées bancaires n'atteignent jamais le navigateur",
+        "text": "IBAN et BIC sont chiffrés champ par champ en AES-256-GCM. L'API admin ne les envoie jamais — seulement un indicateur « RIB enregistré » — car masquer une donnée dans l'interface la laisse visible dans l'onglet réseau.",
+        "note": "La clé n'existe que dans l'environnement ; aucun repli en clair."
+      },
+      "d5": {
+        "tag": "Paiements",
+        "title": "Pensé PSP d'abord, simulé volontairement",
+        "text": "Conçu pour un partage de paiement façon Stripe Connect : on ne stocke que des jetons PSP, jamais de numéros de carte. La plateforme reste hors du périmètre PCI et de la question de licence BaFin.",
+        "note": "Les prix sont TTC (TVA 19 %) ; la commission de 12 % est calculée côté serveur."
+      },
+      "d6": {
+        "tag": "Tests",
+        "title": "Une base de test recréée à chaque exécution",
+        "text": "Jest et Supertest tournent sur une base supprimée et recréée avant chaque exécution. Cela a corrigé un vrai test instable de pagination causé par des données résiduelles.",
+        "note": "Protégé pour ne jamais pouvoir supprimer autre chose qu'une base *_test."
+      }
+    },
+    "alsoTitle": "Également en place",
+    "nextTitle": "Ce que je ferais ensuite",
+    "next1": "Un pipeline CI qui lance lint et tests à chaque push",
+    "next2": "Du verrouillage de lignes sur les transitions de réservation pour exclure les accès concurrents",
+    "next3": "Des tests frontend et une vraie intégration de prestataire de paiement"
+  },
+  "more": {
+    "titleStart": "Autres",
+    "titleAccent": "projets",
+    "count": "{count} projets",
+    "visitLive": "Voir le site",
+    "viewCode": "Lire le code",
+    "privateCode": "Code privé",
     "items": {
-        "Homeservice": {
-         "tag": "Produit · Mobile",
-         "title": "Application de services à domicile",
-        "description": "HomeServices : une plateforme complète de services à domicile, conçue de bout en bout. J'ai conçu et développé une plateforme connectée qui résout un problème concret pour tous les acteurs de la chaîne, des particuliers aux artisans.",
-       "role": "Full-Stack — Applications React Native (Expo) pour clients et prestataires, API Node.js, MySQL"
-}, 
-      
-      "homeServiceShowcase": {
-        "tag": "Produit · Web",
-        "title": "HomeServices — Vitrine produit",
-        "description": "Vitrine bilingue (EN/DE) présentant toute la plateforme HomeServices pour le marché DACH — l'app client, l'app partenaire pour entreprises, collaborateurs et indépendants, et le centre de contrôle admin, avec présentations des fonctionnalités et decks téléchargeables.",
-        "role": "Frontend — Next.js, TypeScript, Tailwind CSS"
+      "homeServicesShowroom": {
+        "tag": "Web · EN / DE",
+        "title": "HomeServices Showroom",
+        "description": "Site produit bilingue pour partenaires et investisseurs : galerie de captures des trois apps, présentations à télécharger et formulaire de contact fonctionnel."
       },
       "glowupApp": {
-        "tag": "Produit · Mobile",
+        "tag": "Mobile · Marketplace",
         "title": "GlowUp Beauty App",
-        "description": "Une marketplace beauté à deux versants pour le marché allemand. Les clients découvrent des professionnels de beauté vérifiés et réservent en temps réel, tandis que les prestataires gèrent planning, clients et revenus depuis une application dédiée.",
-        "role": "Full-stack — Apps React Native (Expo) client & prestataire, API Node.js, PostgreSQL"
+        "description": "Marketplace beauté à deux versants pour l'Allemagne : les clients réservent des professionnels vérifiés en temps réel ; les prestataires gèrent planning, clients et revenus depuis une app dédiée."
       },
-      "showcase": {
-        "tag": "Produit · Web",
-        "title": "GlowUp — Vitrine produit",
-        "description": "Vitrine bilingue (DE/EN) à destination des investisseurs et partenaires, présentant tout l'écosystème GlowUp — données de marché, fonctionnalités détaillées et résumés exécutifs pour l'app client comme pour l'app Pro dédiée aux studios.",
-        "role": "Frontend — Next.js 16, TypeScript, Tailwind CSS"
+      "glowupShowroom": {
+        "tag": "Web · DE / EN",
+        "title": "GlowUp Showroom",
+        "description": "Vitrine pour investisseurs et partenaires de l'écosystème GlowUp — données de marché, fonctionnalités détaillées et synthèses pour les deux apps."
       },
       "mhtravel": {
         "tag": "Freelance · Web",
         "title": "MhTravel",
-        "description": "Plateforme de réservation de voyages responsive livrée en freelance pour une agence de voyages en Tunisie, avec contenus dynamiques et parcours de réservation sur un backend Node.js / Express / MySQL.",
-        "role": "Freelance — Next.js, React, Node.js, Express, MySQL"
+        "description": "Plateforme de réservation de voyages livrée pour une agence en Tunisie — contenus dynamiques et parcours de réservation sur un backend Node.js / Express / MySQL."
       }
     }
   },
+  "about": {
+    "eyebrow": "À propos",
+    "titleStart": "De Tunis à Essen,",
+    "titleAccent": "toujours en production.",
+    "text": "J'aime porter une fonctionnalité du fichier Figma jusqu'à la base de données en production. Je me suis installé en Allemagne en 2025, j'ai atteint le niveau C1 en allemand et je travaille chaque jour en allemand, anglais et français.",
+    "toolboxLabel": "Boîte à outils"
+  },
   "experience": {
-    "eyebrow": "Parcours",
-    "title": "Où j'ai travaillé",
+    "label": "Expérience",
+    "now": "aujourd'hui",
     "items": {
       "freelance": {
         "title": "Développeur Full-Stack Freelance",
-        "company": "Indépendant",
-        "location": "Remote",
-        "description": "Développement de bout en bout d'une plateforme d'agence de voyages en freelance (web & mobile), en parallèle du développement de la plateforme beauté GlowUp."
+        "description": "Conception et développement de HomeServices et GlowUp de bout en bout ; plateforme de réservation livrée pour une agence de voyages."
       },
       "tunidesign": {
-        "title": "Développeur Full-Stack",
-        "company": "TuniDesign",
-        "location": "Tunis, Tunisie",
-        "description": "Développement de solutions web et mobiles pour une plateforme juridique tunisienne. Création de 30+ composants UI réutilisables, réduisant de 35% le temps de développement des projets suivants."
+        "title": "Développeur Full-Stack · TuniDesign",
+        "description": "Web et mobile pour une plateforme de services juridiques. 30+ composants UI partagés qui ont réduit de 35 % le temps de développement des projets suivants."
       },
       "croissantRouge": {
-        "title": "Développeur React",
-        "company": "Croissant-Rouge Tunisien",
-        "location": "Tunis, Tunisie · Bénévolat",
-        "description": "Bénévolat au sein de l'équipe technique du Croissant-Rouge tunisien, maintenance et optimisation des plateformes internes et des intégrations d'API REST."
+        "title": "Développeur React · Croissant-Rouge Tunisien",
+        "description": "Bénévolat : maintenance et optimisation de plateformes internes et d'intégrations d'API REST."
       },
       "etafakna": {
-        "title": "Développeur Full-Stack",
-        "company": "E-tafakna",
-        "location": "Tunis, Tunisie",
-        "description": "Développement d'un tableau de bord admin interactif (React, MUI, Chart.js) avec CRUD complet sur 16 entités de données. Réduction d'environ 40% des temps de réponse SQL et ajout de tests de charge Artillery sur les endpoints critiques."
+        "title": "Développeur Full-Stack · E-tafakna",
+        "description": "Back-office avec CRUD sur 16 entités ; temps de réponse SQL réduits d'environ 40 % et tests de charge Artillery ajoutés."
       }
     }
   },
   "contact": {
-    "eyebrow": "Me contacter",
-    "title": "Construisons quelque chose de grand.",
-    "subtitle": "Ouvert aux postes en CDI comme aux missions freelance. Je réponds généralement sous 24h.",
+    "eyebrow": "Contact",
+    "titleStart": "Construisons",
+    "titleAccent": "quelque chose de bien.",
+    "subtitle": "Je réponds sous un jour ouvré — en français, anglais ou allemand.",
     "emailLabel": "Email",
     "phoneLabel": "Téléphone",
-    "locationLabel": "Localisation",
-    "locationValue": "Essen, Allemagne",
-    "availability": "Actuellement disponible",
-    "formName": "Nom",
+    "elsewhereLabel": "Ailleurs",
+    "formTopic": "De quoi s'agit-il ?",
+    "topicJob": "Poste en CDI",
+    "topicFreelance": "Mission freelance",
+    "topicOther": "Autre chose",
+    "formName": "Votre nom",
     "formEmail": "Email",
     "formMessage": "Message",
+    "formPlaceholder": "Quelques lignes sur le poste ou le projet…",
     "formSend": "Envoyer le message",
     "formSending": "Envoi en cours…",
-    "formSuccess": "Merci ! Votre message a bien été envoyé — je vous répondrai bientôt.",
-    "formError": "Une erreur s'est produite. Veuillez réessayer ou m'écrire directement par email."
+    "formNote": "Vous recevrez immédiatement un email de confirmation dans votre langue.",
+    "formSuccess": "Merci — votre message est en route. Un email de confirmation vous attend.",
+    "formError": "Une erreur s'est produite. Réessayez ou écrivez-moi directement par email."
   },
   "footer": {
-    "rights": "Tous droits réservés.",
-    "builtWith": "Construit avec Next.js & Tailwind CSS."
+    "location": "Essen, Allemagne",
+    "builtWith": "Réalisé avec Next.js, TypeScript et Tailwind CSS"
   }
 }

@@ -1,76 +1,115 @@
 import { socials } from "@/lib/data";
 
 export type EmailLocale = "en" | "fr" | "de";
+export type ContactTopic = "job" | "freelance" | "other";
 
 export type ContactPayload = {
   name: string;
   email: string;
   message: string;
   locale: EmailLocale;
+  topic: ContactTopic;
 };
 
 type Copy = {
   subject: string;
   preheader: string;
-  greeting: (name: string) => string;
-  paragraphs: string[];
+  headline: (firstName: string) => string;
+  intro: string;
+  topicLine: Record<ContactTopic, string>;
+  nextTitle: string;
+  steps: string[];
   summaryTitle: string;
+  portfolioCta: string;
+  cvCta: string;
   closing: string;
   role: string;
   location: string;
-  portfolio: string;
   footer: string;
 };
 
 const copy: Record<EmailLocale, Copy> = {
   en: {
     subject: "Thanks for reaching out — Yahya Dhaou",
-    preheader: "Your message arrived safely. I'll get back to you personally, usually within one business day.",
-    greeting: (name) => `Hi ${name},`,
-    paragraphs: [
-      "Thank you for getting in touch — it's a pleasure to hear from you.",
-      "Your message has arrived safely and I'm reviewing it now. I'll get back to you personally, usually within one business day.",
-      "Whether it's a full-time role, a freelance project or a technical question, I'm looking forward to finding out how I can help.",
+    preheader: "Your message arrived safely. I'll reply personally within one business day.",
+    headline: (n) => `Thank you, ${n}.`,
+    intro:
+      "It's a pleasure to hear from you. Your message arrived safely, and I'll get back to you personally — no templates, no auto-pilot.",
+    topicLine: {
+      job: "I'm glad you thought of me for the role. I'll come back with my availability and anything you need for the next step.",
+      freelance: "I'm glad you thought of me for your project. I'll come back with first questions and an idea of how we could work together.",
+      other: "I'll read it carefully and come back to you with a proper answer.",
+    },
+    nextTitle: "What happens next",
+    steps: [
+      "I read your message personally.",
+      "You get my reply within one business day.",
+      "If it's a fit, we set up a short call at a time that suits you.",
     ],
     summaryTitle: "Your message",
-    closing: "Kind regards,",
-    role: "Full-Stack Developer · React, React Native, Next.js, Node.js",
+    portfolioCta: "View my work",
+    cvCta: "Download my CV",
+    closing: "Talk soon,",
+    role: "Full-stack developer · React, React Native, Next.js, Node.js",
     location: "Essen, Germany",
-    portfolio: "Portfolio",
-    footer: "You're receiving this email because you submitted the contact form on my portfolio. No further action is needed.",
+    footer: "You're receiving this because you used the contact form on my portfolio. There's nothing else you need to do.",
   },
   fr: {
     subject: "Merci pour votre message — Yahya Dhaou",
-    preheader: "Votre message est bien arrivé. Je vous répondrai personnellement, généralement sous un jour ouvré.",
-    greeting: (name) => `Bonjour ${name},`,
-    paragraphs: [
-      "Merci de m'avoir contacté — c'est un plaisir d'avoir de vos nouvelles.",
-      "Votre message est bien arrivé et je suis en train d'en prendre connaissance. Je vous répondrai personnellement, généralement sous un jour ouvré.",
-      "Qu'il s'agisse d'un poste, d'une mission freelance ou d'une question technique, j'ai hâte de voir comment je peux vous aider.",
+    preheader: "Votre message est bien arrivé. Je vous réponds personnellement sous un jour ouvré.",
+    headline: (n) => `Merci, ${n}.`,
+    intro:
+      "C'est un plaisir d'avoir de vos nouvelles. Votre message est bien arrivé et je vous répondrai personnellement — pas de réponse automatique.",
+    topicLine: {
+      job: "Merci d'avoir pensé à moi pour ce poste. Je reviens vers vous avec mes disponibilités et tout ce qu'il faut pour la suite.",
+      freelance: "Merci d'avoir pensé à moi pour votre projet. Je reviens vers vous avec mes premières questions et une proposition pour travailler ensemble.",
+      other: "Je vais le lire attentivement et vous apporter une vraie réponse.",
+    },
+    nextTitle: "La suite",
+    steps: [
+      "Je lis votre message personnellement.",
+      "Vous recevez ma réponse sous un jour ouvré.",
+      "Si cela correspond, nous fixons un court appel au moment qui vous convient.",
     ],
     summaryTitle: "Votre message",
-    closing: "Bien cordialement,",
+    portfolioCta: "Voir mes projets",
+    cvCta: "Télécharger mon CV",
+    closing: "À très vite,",
     role: "Développeur Full-Stack · React, React Native, Next.js, Node.js",
     location: "Essen, Allemagne",
-    portfolio: "Portfolio",
-    footer: "Vous recevez cet email car vous avez rempli le formulaire de contact de mon portfolio. Aucune action n'est requise.",
+    footer: "Vous recevez cet email car vous avez utilisé le formulaire de contact de mon portfolio. Aucune action n'est nécessaire.",
   },
   de: {
     subject: "Vielen Dank für Ihre Nachricht — Yahya Dhaou",
-    preheader: "Ihre Nachricht ist angekommen. Ich melde mich persönlich bei Ihnen, in der Regel innerhalb eines Werktages.",
-    greeting: (name) => `Hallo ${name},`,
-    paragraphs: [
-      "vielen Dank für Ihre Nachricht — es freut mich sehr, von Ihnen zu hören.",
-      "Ihre Nachricht ist sicher bei mir angekommen und ich sehe sie mir gerade an. Ich melde mich persönlich bei Ihnen, in der Regel innerhalb eines Werktages.",
-      "Ob Festanstellung, Freelance-Projekt oder technische Frage — ich freue mich darauf, gemeinsam die passende Lösung zu finden.",
+    preheader: "Ihre Nachricht ist angekommen. Ich antworte Ihnen persönlich innerhalb eines Werktages.",
+    headline: (n) => `Vielen Dank, ${n}.`,
+    intro:
+      "Es freut mich sehr, von Ihnen zu hören. Ihre Nachricht ist sicher angekommen und ich melde mich persönlich bei Ihnen — keine Vorlagen, kein Autopilot.",
+    topicLine: {
+      job: "Danke, dass Sie bei der Stelle an mich gedacht haben. Ich melde mich mit meiner Verfügbarkeit und allem, was Sie für den nächsten Schritt brauchen.",
+      freelance: "Danke, dass Sie bei Ihrem Projekt an mich gedacht haben. Ich melde mich mit ersten Fragen und einem Vorschlag für die Zusammenarbeit.",
+      other: "Ich lese sie aufmerksam und melde mich mit einer fundierten Antwort.",
+    },
+    nextTitle: "So geht es weiter",
+    steps: [
+      "Ich lese Ihre Nachricht persönlich.",
+      "Sie erhalten meine Antwort innerhalb eines Werktages.",
+      "Wenn es passt, vereinbaren wir ein kurzes Gespräch zu einem Termin Ihrer Wahl.",
     ],
     summaryTitle: "Ihre Nachricht",
+    portfolioCta: "Meine Projekte ansehen",
+    cvCta: "Lebenslauf herunterladen",
     closing: "Mit freundlichen Grüßen",
     role: "Full-Stack-Entwickler · React, React Native, Next.js, Node.js",
     location: "Essen, Deutschland",
-    portfolio: "Portfolio",
-    footer: "Sie erhalten diese E-Mail, weil Sie das Kontaktformular auf meinem Portfolio ausgefüllt haben. Es ist keine weitere Aktion erforderlich.",
+    footer: "Sie erhalten diese E-Mail, weil Sie das Kontaktformular auf meinem Portfolio genutzt haben. Es ist nichts weiter zu tun.",
   },
+};
+
+const topicNames: Record<ContactTopic, string> = {
+  job: "Full-time role",
+  freelance: "Freelance project",
+  other: "Other",
 };
 
 const localeNames: Record<EmailLocale, string> = {
@@ -79,20 +118,20 @@ const localeNames: Record<EmailLocale, string> = {
   de: "Deutsch",
 };
 
-const colors = {
-  page: "#eef0f4",
-  card: "#ffffff",
-  dark: "#0a0c12",
-  text: "#1c1f26",
-  muted: "#6b7280",
-  border: "#e5e7eb",
-  soft: "#f6f7f9",
-  purple: "#a855f7",
-  cyan: "#22d3ee",
+const c = {
+  page: "#F3F3F0",
+  card: "#FFFFFF",
+  ink: "#111111",
+  text: "#2E2E2A",
+  muted: "#62625D",
+  rule: "#E2E2DC",
+  soft: "#F7F7F4",
+  accent: "#A8321C",
 };
 
-const fontStack =
-  "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif";
+const sans = "-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif";
+const serif = "Georgia, 'Times New Roman', serif";
+const mono = "'SFMono-Regular', Menlo, Consolas, monospace";
 
 function escapeHtml(value: string) {
   return value
@@ -107,16 +146,31 @@ function formatMessage(message: string) {
   return escapeHtml(message).replace(/\r?\n/g, "<br />");
 }
 
+function firstName(name: string) {
+  return name.split(/\s+/)[0] || name;
+}
+
+function label(text: string, color = c.muted) {
+  return `<div style="font-family:${mono};font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:${color};">${text}</div>`;
+}
+
+function button(href: string, text: string, primary: boolean) {
+  const style = primary
+    ? `background:${c.ink};color:#FFFFFF;border:1px solid ${c.ink};`
+    : `background:#FFFFFF;color:${c.ink};border:1px solid ${c.ink};`;
+  return `<a href="${href}" style="display:inline-block;padding:13px 24px;border-radius:999px;font-family:${sans};font-size:14px;font-weight:600;text-decoration:none;${style}">${text}</a>`;
+}
+
 function layout({
   lang,
   preheader,
-  eyebrow,
+  tagline,
   body,
   footer,
 }: {
   lang: string;
   preheader: string;
-  eyebrow: string;
+  tagline: string;
   body: string;
   footer: string;
 }) {
@@ -125,35 +179,32 @@ function layout({
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="color-scheme" content="light" />
+<meta name="color-scheme" content="light only" />
 <title>Yahya Dhaou</title>
 </head>
-<body style="margin:0;padding:0;background:${colors.page};font-family:${fontStack};-webkit-font-smoothing:antialiased;">
+<body style="margin:0;padding:0;background:${c.page};font-family:${sans};-webkit-font-smoothing:antialiased;">
 <div style="display:none;max-height:0;overflow:hidden;opacity:0;">${escapeHtml(preheader)}</div>
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:${colors.page};padding:32px 12px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:${c.page};padding:40px 12px;">
   <tr>
     <td align="center">
-      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:600px;background:${colors.card};border-radius:16px;overflow:hidden;border:1px solid ${colors.border};">
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:600px;">
         <tr>
-          <td style="background:${colors.dark};padding:28px 36px;">
+          <td style="padding:0 4px 16px;">
             <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
               <tr>
-                <td style="font-size:22px;font-weight:800;color:#ffffff;letter-spacing:-0.5px;">YD<span style="color:${colors.cyan};">.</span></td>
-                <td align="right" style="font-family:'SFMono-Regular',Menlo,Consolas,monospace;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:${colors.cyan};">${escapeHtml(eyebrow)}</td>
+                <td style="font-family:${sans};font-size:16px;font-weight:600;color:${c.ink};">Yahya Dhaou</td>
+                <td align="right" style="font-family:${mono};font-size:11px;letter-spacing:1px;text-transform:uppercase;color:${c.muted};">${escapeHtml(tagline)}</td>
               </tr>
             </table>
           </td>
         </tr>
         <tr>
-          <td style="height:3px;line-height:3px;font-size:0;background:${colors.purple};background-image:linear-gradient(90deg, ${colors.purple}, ${colors.cyan});">&nbsp;</td>
-        </tr>
-        <tr>
-          <td style="padding:36px 36px 28px;color:${colors.text};font-size:15px;line-height:1.65;">
+          <td style="background:${c.card};border:1px solid ${c.rule};border-top:2px solid ${c.ink};border-radius:4px;padding:44px 40px 36px;color:${c.text};font-size:16px;line-height:1.65;">
             ${body}
           </td>
         </tr>
         <tr>
-          <td style="padding:20px 36px 28px;border-top:1px solid ${colors.border};font-size:12px;line-height:1.6;color:${colors.muted};">
+          <td style="padding:20px 4px 0;font-family:${sans};font-size:12px;line-height:1.6;color:${c.muted};">
             ${footer}
           </td>
         </tr>
@@ -165,110 +216,145 @@ function layout({
 </html>`;
 }
 
-function signature(c: Copy, siteUrl: string) {
-  const link = (href: string, label: string) =>
-    `<a href="${href}" style="color:${colors.text};text-decoration:none;font-weight:600;">${label}</a>`;
+export function autoReplyEmail(payload: ContactPayload, siteUrl: string) {
+  const t = copy[payload.locale];
+  const name = firstName(payload.name);
+  const cvUrl = `${siteUrl}/cv/Yahya-Dhaou-CV-${payload.locale === "de" ? "DE" : "EN"}.pdf`;
+  const portfolioUrl = `${siteUrl}/${payload.locale}`;
 
-  return `
-<table role="presentation" cellpadding="0" cellspacing="0" style="margin-top:28px;">
+  const steps = t.steps
+    .map(
+      (step, i) => `
+<tr>
+  <td style="width:36px;padding:10px 0;vertical-align:top;font-family:${serif};font-style:italic;font-size:20px;color:${c.accent};">${i + 1}.</td>
+  <td style="padding:12px 0;border-bottom:${i < t.steps.length - 1 ? `1px solid ${c.rule}` : "0"};font-size:15px;color:${c.text};">${step}</td>
+</tr>`
+    )
+    .join("");
+
+  const body = `
+<h1 style="margin:0;font-family:${serif};font-style:italic;font-weight:400;font-size:40px;line-height:1.1;letter-spacing:-0.5px;color:${c.ink};">${escapeHtml(t.headline(name))}</h1>
+<p style="margin:22px 0 0;">${t.intro}</p>
+<p style="margin:14px 0 0;">${t.topicLine[payload.topic]}</p>
+
+<div style="margin:32px 0 0;">${label(t.nextTitle, c.accent)}</div>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-top:6px;">${steps}</table>
+
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:28px 0 0;background:${c.soft};border:1px solid ${c.rule};border-radius:4px;">
   <tr>
-    <td style="padding-left:14px;border-left:3px solid ${colors.purple};">
-      <div style="font-size:16px;font-weight:700;color:${colors.text};">Yahya Dhaou</div>
-      <div style="font-size:13px;color:${colors.muted};margin-top:2px;">${c.role}</div>
-      <div style="font-size:13px;color:${colors.muted};margin-top:2px;">${c.location}</div>
-      <div style="font-size:13px;margin-top:10px;">
-        ${link(siteUrl, c.portfolio)}
-        <span style="color:${colors.border};">&nbsp;|&nbsp;</span>
-        ${link(socials.linkedin, "LinkedIn")}
-        <span style="color:${colors.border};">&nbsp;|&nbsp;</span>
-        ${link(socials.github, "GitHub")}
+    <td style="padding:18px 20px;">
+      ${label(t.summaryTitle)}
+      <div style="margin-top:10px;font-size:14px;line-height:1.65;color:${c.text};">${formatMessage(payload.message)}</div>
+    </td>
+  </tr>
+</table>
+
+<table role="presentation" cellpadding="0" cellspacing="0" style="margin-top:32px;">
+  <tr>
+    <td style="padding:0 8px 8px 0;">${button(portfolioUrl, t.portfolioCta, true)}</td>
+    <td style="padding:0 0 8px 0;">${button(cvUrl, t.cvCta, false)}</td>
+  </tr>
+</table>
+
+<p style="margin:32px 0 0;">${t.closing}</p>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-top:14px;border-top:1px solid ${c.rule};">
+  <tr>
+    <td style="padding-top:18px;">
+      <div style="font-family:${serif};font-style:italic;font-size:24px;color:${c.ink};">Yahya Dhaou</div>
+      <div style="margin-top:4px;font-size:13px;color:${c.muted};">${t.role}</div>
+      <div style="margin-top:2px;font-size:13px;color:${c.muted};">${t.location} · <a href="tel:${socials.phone.replace(/\s/g, "")}" style="color:${c.muted};text-decoration:none;">${socials.phone}</a></div>
+      <div style="margin-top:12px;font-size:13px;">
+        <a href="${portfolioUrl}" style="color:${c.ink};font-weight:600;text-decoration:none;">Portfolio</a>
+        <span style="color:${c.rule};">&nbsp;/&nbsp;</span>
+        <a href="${socials.linkedin}" style="color:${c.ink};font-weight:600;text-decoration:none;">LinkedIn</a>
+        <span style="color:${c.rule};">&nbsp;/&nbsp;</span>
+        <a href="${socials.github}" style="color:${c.ink};font-weight:600;text-decoration:none;">GitHub</a>
       </div>
     </td>
   </tr>
 </table>`;
-}
-
-export function autoReplyEmail(payload: ContactPayload, siteUrl: string) {
-  const c = copy[payload.locale];
-  const paragraphs = c.paragraphs
-    .map((p) => `<p style="margin:0 0 16px;">${p}</p>`)
-    .join("");
-
-  const body = `
-<p style="margin:0 0 16px;font-size:17px;font-weight:600;">${escapeHtml(c.greeting(payload.name))}</p>
-${paragraphs}
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:24px 0 4px;background:${colors.soft};border:1px solid ${colors.border};border-radius:12px;">
-  <tr>
-    <td style="padding:18px 20px;">
-      <div style="font-family:'SFMono-Regular',Menlo,Consolas,monospace;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:${colors.muted};margin-bottom:8px;">${c.summaryTitle}</div>
-      <div style="font-size:14px;line-height:1.6;color:${colors.text};">${formatMessage(payload.message)}</div>
-    </td>
-  </tr>
-</table>
-<p style="margin:28px 0 0;">${c.closing}</p>
-${signature(c, siteUrl)}`;
 
   const text = [
-    c.greeting(payload.name),
+    t.headline(name),
     "",
-    ...c.paragraphs.flatMap((p) => [p, ""]),
-    `${c.summaryTitle}:`,
+    t.intro,
+    "",
+    t.topicLine[payload.topic],
+    "",
+    `${t.nextTitle}:`,
+    ...t.steps.map((s, i) => `${i + 1}. ${s}`),
+    "",
+    `${t.summaryTitle}:`,
     payload.message,
     "",
-    c.closing,
+    `${t.portfolioCta}: ${portfolioUrl}`,
+    `${t.cvCta}: ${cvUrl}`,
+    "",
+    t.closing,
     "Yahya Dhaou",
-    c.role,
-    c.location,
-    `${c.portfolio}: ${siteUrl}`,
+    t.role,
+    `${t.location} · ${socials.phone}`,
     `LinkedIn: ${socials.linkedin}`,
     `GitHub: ${socials.github}`,
   ].join("\n");
 
   return {
-    subject: c.subject,
+    subject: t.subject,
     html: layout({
       lang: payload.locale,
-      preheader: c.preheader,
-      eyebrow: "Full-Stack Developer",
+      preheader: t.preheader,
+      tagline: "Full-stack developer",
       body,
-      footer: c.footer,
+      footer: t.footer,
     }),
     text,
   };
 }
 
 export function ownerNotificationEmail(payload: ContactPayload, receivedAt: Date) {
-  const date = receivedAt.toLocaleString("de-DE", { timeZone: "Europe/Berlin" });
+  const date = receivedAt.toLocaleString("de-DE", {
+    timeZone: "Europe/Berlin",
+    dateStyle: "medium",
+    timeStyle: "short",
+  });
+  const topic = topicNames[payload.topic];
+  const replySubject = encodeURIComponent(copy[payload.locale].subject.replace(/ — .*/, ""));
 
-  const row = (label: string, value: string) => `
+  const row = (name: string, value: string) => `
 <tr>
-  <td style="padding:10px 0;border-bottom:1px solid ${colors.border};width:110px;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:${colors.muted};vertical-align:top;">${label}</td>
-  <td style="padding:10px 0;border-bottom:1px solid ${colors.border};font-size:14px;color:${colors.text};">${value}</td>
+  <td style="padding:12px 0;border-bottom:1px solid ${c.rule};width:110px;vertical-align:top;">${label(name)}</td>
+  <td style="padding:12px 0;border-bottom:1px solid ${c.rule};font-size:15px;color:${c.ink};">${value}</td>
 </tr>`;
 
   const body = `
-<p style="margin:0 0 6px;font-size:20px;font-weight:700;">New message from ${escapeHtml(payload.name)}</p>
-<p style="margin:0 0 24px;color:${colors.muted};font-size:14px;">Sent via the contact form on your portfolio.</p>
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+<div style="display:inline-block;padding:5px 12px;border:1px solid ${c.accent};border-radius:999px;font-family:${mono};font-size:11px;letter-spacing:1px;text-transform:uppercase;color:${c.accent};">${topic}</div>
+<h1 style="margin:18px 0 0;font-family:${serif};font-style:italic;font-weight:400;font-size:34px;line-height:1.15;color:${c.ink};">${escapeHtml(payload.name)} wrote to you.</h1>
+<p style="margin:10px 0 0;font-size:15px;color:${c.muted};">New message from the contact form on your portfolio.</p>
+
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-top:24px;border-top:1px solid ${c.ink};">
   ${row("Name", escapeHtml(payload.name))}
-  ${row("Email", `<a href="mailto:${escapeHtml(payload.email)}" style="color:${colors.purple};text-decoration:none;">${escapeHtml(payload.email)}</a>`)}
+  ${row("Email", `<a href="mailto:${escapeHtml(payload.email)}" style="color:${c.accent};text-decoration:none;">${escapeHtml(payload.email)}</a>`)}
+  ${row("Topic", topic)}
   ${row("Language", localeNames[payload.locale])}
   ${row("Received", date)}
 </table>
-<div style="margin:24px 0 0;padding:18px 20px;background:${colors.soft};border:1px solid ${colors.border};border-left:3px solid ${colors.purple};border-radius:12px;font-size:14px;line-height:1.65;">${formatMessage(payload.message)}</div>
-<table role="presentation" cellpadding="0" cellspacing="0" style="margin-top:28px;">
+
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:24px 0 0;background:${c.soft};border:1px solid ${c.rule};border-radius:4px;">
   <tr>
-    <td style="background:${colors.dark};border-radius:999px;">
-      <a href="mailto:${escapeHtml(payload.email)}?subject=${encodeURIComponent("Re: Your message")}" style="display:inline-block;padding:12px 26px;font-size:14px;font-weight:600;color:#ffffff;text-decoration:none;">Reply to ${escapeHtml(payload.name)} →</a>
-    </td>
+    <td style="padding:20px 22px;font-size:15px;line-height:1.7;color:${c.text};">${formatMessage(payload.message)}</td>
   </tr>
+</table>
+
+<table role="presentation" cellpadding="0" cellspacing="0" style="margin-top:28px;">
+  <tr><td>${button(`mailto:${escapeHtml(payload.email)}?subject=${replySubject}`, `Reply to ${escapeHtml(firstName(payload.name))} →`, true)}</td></tr>
 </table>`;
 
   const text = [
-    `New message from ${payload.name}`,
+    `[${topic}] New message from ${payload.name}`,
     "",
     `Name: ${payload.name}`,
     `Email: ${payload.email}`,
+    `Topic: ${topic}`,
     `Language: ${localeNames[payload.locale]}`,
     `Received: ${date}`,
     "",
@@ -276,13 +362,14 @@ export function ownerNotificationEmail(payload: ContactPayload, receivedAt: Date
   ].join("\n");
 
   return {
-    subject: `New contact: ${payload.name}`,
+    subject: `[${topic}] New message from ${payload.name}`,
     html: layout({
       lang: "en",
       preheader: payload.message.slice(0, 120),
-      eyebrow: "Portfolio · Contact",
+      tagline: "Portfolio · Contact",
       body,
-      footer: "An automatic confirmation was sent to the sender in their language. Just hit reply to answer them directly.",
+      footer:
+        "A confirmation was sent to the sender in their language. Hit reply to answer them directly.",
     }),
     text,
   };

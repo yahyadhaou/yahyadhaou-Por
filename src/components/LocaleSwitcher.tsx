@@ -1,60 +1,54 @@
 "use client";
 
-import { useLocale } from "next-intl";
-import { useState, useTransition } from "react";
+import { useLocale, useTranslations } from "next-intl";
+import { useTransition } from "react";
 import { usePathname, useRouter } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
 
-const labels: Record<string, string> = {
-  en: "EN",
-  fr: "FR",
-  de: "DE",
-};
-
-export function LocaleSwitcher() {
+export function LocaleSwitcher({ tone = "modern" }: { tone?: "modern" | "editorial" }) {
+  const t = useTranslations("nav");
   const locale = useLocale();
   const pathname = usePathname();
   const router = useRouter();
-  const [open, setOpen] = useState(false);
-  const [, startTransition] = useTransition();
+  const [isPending, startTransition] = useTransition();
 
-  function switchTo(next: string) {
-    setOpen(false);
+  function switchTo(next: (typeof routing.locales)[number]) {
     startTransition(() => {
-      router.replace(pathname, { locale: next });
+      router.replace(pathname, { locale: next, scroll: false });
     });
   }
 
   return (
-    <div className="relative">
-      <button
-        type="button"
-        onClick={() => setOpen((v) => !v)}
-        onBlur={() => setTimeout(() => setOpen(false), 120)}
-        className="flex items-center gap-1.5 rounded-full border border-border px-3 py-1.5 font-mono text-xs text-muted transition-colors hover:border-accent-b/50 hover:text-foreground"
-        aria-label="Change language"
-      >
-        {labels[locale]}
-        <svg width="10" height="10" viewBox="0 0 10 10" className="opacity-60">
-          <path d="M1 3l4 4 4-4" stroke="currentColor" strokeWidth="1.4" fill="none" />
-        </svg>
-      </button>
-      {open && (
-        <div className="glass-card absolute right-0 top-full mt-2 min-w-[84px] overflow-hidden rounded-xl">
-          {routing.locales.map((l) => (
-            <button
-              key={l}
-              type="button"
-              onMouseDown={() => switchTo(l)}
-              className={`block w-full px-3.5 py-2 text-left font-mono text-xs transition-colors hover:bg-white/5 ${
-                l === locale ? "text-accent-b" : "text-muted"
-              }`}
-            >
-              {labels[l]}
-            </button>
-          ))}
-        </div>
-      )}
+    <div
+      role="group"
+      aria-label={t("language")}
+      aria-busy={isPending}
+      className={
+        tone === "modern"
+          ? "inline-flex rounded-full border border-rule bg-paper-alt p-0.5 font-mono text-[11px]"
+          : "flex gap-0.5 font-mono text-xs"
+      }
+    >
+      {routing.locales.map((l) => (
+        <button
+          key={l}
+          type="button"
+          lang={l}
+          aria-pressed={l === locale}
+          onClick={() => switchTo(l)}
+          className={
+            tone === "modern"
+              ? `h-9 min-w-9 rounded-full px-2.5 uppercase transition-colors ${
+                  l === locale ? "bg-surface text-ink shadow-card" : "text-muted hover:text-ink"
+                }`
+              : `h-10 min-w-10 rounded border px-2 uppercase transition-colors ${
+                  l === locale ? "border-ink bg-ink text-paper" : "border-transparent text-muted hover:text-ink"
+                }`
+          }
+        >
+          {l}
+        </button>
+      ))}
     </div>
   );
 }

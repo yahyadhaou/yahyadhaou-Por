@@ -4,12 +4,14 @@ import {
   autoReplyEmail,
   ownerNotificationEmail,
   type ContactPayload,
+  type ContactTopic,
   type EmailLocale,
 } from "@/lib/email/templates";
 
 export const runtime = "nodejs";
 
 const LOCALES: EmailLocale[] = ["en", "fr", "de"];
+const TOPICS: ContactTopic[] = ["job", "freelance", "other"];
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
 const RATE_LIMIT = 5;
@@ -55,6 +57,9 @@ export async function POST(request: Request) {
     locale: LOCALES.includes(body.locale as EmailLocale)
       ? (body.locale as EmailLocale)
       : "en",
+    topic: TOPICS.includes(body.topic as ContactTopic)
+      ? (body.topic as ContactTopic)
+      : "other",
   };
 
   if (!payload.name || !EMAIL_RE.test(payload.email) || payload.message.length < 2) {
@@ -72,7 +77,7 @@ export async function POST(request: Request) {
   });
 
   const from = { name: "Yahya Dhaou", address: user };
-  const siteUrl = process.env.SITE_URL ?? new URL(request.url).origin;
+  const siteUrl = (process.env.SITE_URL || new URL(request.url).origin).replace(/\/+$/, "");
 
   try {
     const notification = ownerNotificationEmail(payload, new Date());
