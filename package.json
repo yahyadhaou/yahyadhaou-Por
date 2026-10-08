@@ -8,7 +8,9 @@
     "start": "next start",
     "lint": "eslint",
     "i18n:check": "node scripts/check-i18n.mjs",
-    "prebuild": "npm run i18n:check"
+    "prebuild": "npm run gallery:manifest && npm run i18n:check",
+    "gallery:manifest": "node scripts/gallery-manifest.mjs",
+    "predev": "npm run gallery:manifest"
   },
   "dependencies": {
     "clsx": "^2.1.1",

@@ -34,7 +34,8 @@ To add or change text: edit `en.json`, mirror the key in `fr.json` and `de.json`
 ## Editing content
 
 - **Projects, screenshots, links, stack, experience dates**: `src/lib/data.ts`. Screenshot lists point at `public/images/projects/<project>/`.
-- **CVs**: `public/cv/Yahya-Dhaou-CV-EN.pdf` and `public/cv/Yahya-Dhaou-CV-DE.pdf`.
+- **CVs**: files in `public/cv/`; the paths used by the site and the reply email are `cvFiles` in `src/lib/data.ts`.
+- **Screenshots**: drop, rename or delete files in `public/images/projects/<project>/`. The gallery list is regenerated automatically before `dev` and `build` (`npm run gallery:manifest`), in natural number order.
 - **Profile photo**: `public/images/yahya.jpg`.
 - **Contact emails** (auto-reply + notification): `src/lib/email/templates.ts`; sending logic in `src/app/api/contact/route.ts`.
 

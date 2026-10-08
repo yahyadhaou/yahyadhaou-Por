@@ -1,4 +1,4 @@
-import { socials } from "@/lib/data";
+import { cvFiles, socials } from "@/lib/data";
 
 export type EmailLocale = "en" | "fr" | "de";
 export type ContactTopic = "job" | "freelance" | "other";
@@ -219,7 +219,7 @@ function layout({
 export function autoReplyEmail(payload: ContactPayload, siteUrl: string) {
   const t = copy[payload.locale];
   const name = firstName(payload.name);
-  const cvUrl = `${siteUrl}/cv/Yahya-Dhaou-CV-${payload.locale === "de" ? "DE" : "EN"}.pdf`;
+  const cvUrl = `${siteUrl}${payload.locale === "de" ? cvFiles.de : cvFiles.en}`;
   const portfolioUrl = `${siteUrl}/${payload.locale}`;
 
   const steps = t.steps

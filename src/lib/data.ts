@@ -1,3 +1,5 @@
+import manifest from "./galleries.generated.json";
+
 export const socials = {
   email: "dhaou.yahya98@gmail.com",
   phone: "+49 15757909481",
@@ -9,7 +11,7 @@ export const homeServicesSite = "https://homeservicewebsite.netlify.app/";
 
 export const cvFiles = {
   en: "/cv/Yahya-Dhaou-CV-EN.pdf",
-  de: "/cv/Yahya-Dhaou-CV-DE.pdf",
+  de: "/cv/yahyadhaoucv.pdf",
 };
 
 export type GalleryKey =
@@ -27,29 +29,30 @@ export type Gallery = {
   images: string[];
 };
 
-const range = (count: number) => Array.from({ length: count }, (_, i) => i + 1);
-const pad = (n: number) => String(n).padStart(2, "0");
+// Generated from the files in public/images/projects/ by scripts/gallery-manifest.mjs
+// (runs before `dev` and `build`). Add, remove or rename screenshots freely.
+const images = (folder: keyof typeof manifest) => manifest[folder];
 
 export const homeServicesGalleries: Gallery[] = [
   {
     key: "customer",
     type: "mobile",
-    images: range(36).map((n) => `/images/projects/home-service-client/${pad(n)}.webp`),
+    images: images("home-service-client"),
   },
   {
     key: "manager",
     type: "mobile",
-    images: range(14).map((n) => `/images/projects/home-service-manager/${pad(n)}.webp`),
+    images: images("home-service-manager"),
   },
   {
     key: "worker",
     type: "mobile",
-    images: range(4).map((n) => `/images/projects/home-service-coworker/${pad(n)}.webp`),
+    images: images("home-service-coworker"),
   },
   {
     key: "admin",
     type: "web",
-    images: range(12).map((n) => `/images/projects/home-service-admin/${n}.webp`),
+    images: images("home-service-admin"),
   },
 ];
 
@@ -70,7 +73,7 @@ export const moreProjects: MoreProject[] = [
       {
         key: "site",
         type: "web",
-        images: range(13).map((n) => `/images/projects/home-service-showcase/${n}.png`),
+        images: images("home-service-showcase"),
       },
     ],
   },
@@ -81,16 +84,12 @@ export const moreProjects: MoreProject[] = [
       {
         key: "client",
         type: "mobile",
-        images: [1, 2, 3, 4, 5, 6, 13, 14, 15, 16, 17, 18, 25, 26, 27, 28, 29].map(
-          (n) => `/images/projects/glowup-app/${n}.jpg`
-        ),
+        images: images("glowup-app"),
       },
       {
         key: "provider",
         type: "mobile",
-        images: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 13, 14, 15, 16, 17, 18, 19, 20, 21].map(
-          (n) => `/images/projects/glowup-pro/${n}.jpg`
-        ),
+        images: images("glowup-pro"),
       },
     ],
   },
@@ -102,7 +101,7 @@ export const moreProjects: MoreProject[] = [
       {
         key: "site",
         type: "web",
-        images: range(9).map((n) => `/images/projects/glowup-showcase/${n}.png`),
+        images: images("glowup-showcase"),
       },
     ],
   },
@@ -114,7 +113,7 @@ export const moreProjects: MoreProject[] = [
       {
         key: "site",
         type: "web",
-        images: range(6).map((n) => `/images/projects/mhtravel/${n}.png`),
+        images: images("mhtravel"),
       },
     ],
   },
